@@ -20,3 +20,9 @@ bookdown::markdown_document2:
     style: Table Caption
     pre: "Table"
     sep: ": "
+bookdown::gitbook:
+  lib_dir: assets
+  split_by: section
+  config:
+    toolbar:
+      position: static

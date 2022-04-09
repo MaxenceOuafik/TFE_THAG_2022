@@ -1,1 +1,5 @@
+---
+bibliography: references.json
+---
+
 # Méthodologie
