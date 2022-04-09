@@ -28,12 +28,11 @@ bookdown::gitbook:
       collapse: subsection
       scroll_highlight: true
       before: |
-        <li>  L'initiation et le suivi du traitement hormonal d'affirmation de genre en médecine générale : résultats d'une étude de cohorte et recommandations pour la pratique clinique  </li>
+        <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG<a></li>
         <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-9795-5721">Dr. Maxence Ouafik</a></li>
       after: |
-        <li>  Travail de Fin d'Etudes pour le master de spécialisation en médecine générale  </li>
-        <li>  Année 2021 - 2022  </li>
-        <li><a href="https://www.uliege.be/"> Université de Liège</a></li>
+        <li><a href ="https://github.com/Asrahal/TFE_THAG_2022">Travail de Fin d'Etudes pour le master de spécialisation en médecine générale</a></li>
+        <li><a href="https://www.uliege.be/">Année 2021-2022 - Université de Liège</a></li>
     toolbar:
       position: fixed
     edit : null
