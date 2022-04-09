@@ -1,0 +1,15 @@
+---
+title: "L'initiation et le suivi du traitement hormonal d'affirmation de genre en médecine générale : résultats d'une étude de cohorte et recommandations pour la pratique clinique"
+author: "Maxence R. Ouafik"
+link-citations: true
+csl: ["vancouver.csl"]
+bibliography: ["references.json"]
+rmd_files: ("index.Rmd", "01-abstract.Rmd", "02-introduction.Rmd", "03-methodology.Rmd", "04-results.Rmd", "05-discussion.Rmd", "06-conclusion.Rmd", "07-references.Rmd", "08-appendix.Rmd")
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(bookdown)
+library(officedown)
+library(officer)
+```

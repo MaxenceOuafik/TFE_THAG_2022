@@ -1,0 +1,22 @@
+bookdown::markdown_document2:
+  base_format: officedown::rdocx_document
+  reference_docx: "TFE_template.docx"
+  page_margins:
+    bottom: 0.4
+    top: 0.4
+    right: 0.4
+    left: 0.4
+    header: 0.4
+    footer: 0.4
+    gutter: 0
+  plots:
+    style: Normal
+    align: center
+    caption:
+      style: Image Caption
+      pre: 'Figure '
+      sep: ': '
+  tables:
+    style: Table Caption
+    pre: "Table"
+    sep: ": "
