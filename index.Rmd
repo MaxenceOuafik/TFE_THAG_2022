@@ -14,5 +14,8 @@ library(officedown)
 library(officer)
 ```
 
-# Test
+# Avant-propos {#avantpropos}
 
+[![](files/flag.jpg){width="361"}](https://www.freepik.com/vectors/lgbt-flag)
+
+## Remerciements {#remerciements}

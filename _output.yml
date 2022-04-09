@@ -21,6 +21,7 @@ bookdown::markdown_document2:
     pre: "Table"
     sep: ": "
 bookdown::gitbook:
+  number_sections: false
   lib_dir: assets
   split_by: section
   config:
@@ -28,12 +29,16 @@ bookdown::gitbook:
       collapse: subsection
       scroll_highlight: true
       before: |
-        <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG<a></li>
-        <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-9795-5721">Dr. Maxence Ouafik</a></li>
+        <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG</a></li>
+        <li><a href="https://orcid.org/0000-0002-9795-5721">Dr. Maxence Ouafik</a></li>
       after: |
-        <li><a href ="https://github.com/Asrahal/TFE_THAG_2022">Travail de Fin d'Etudes pour le master de spécialisation en médecine générale</a></li>
-        <li><a href="https://www.uliege.be/">Année 2021-2022 - Université de Liège</a></li>
+        <p style="text-align:center">Année 2021-2022 - Université de Liège</p>
+        <a href="http://www.dmguliege.be/"><img src="files/logo.png" width="300" height="144"></a>
+
     toolbar:
       position: fixed
     edit : null
-    download: 
+    sharing:
+      github: yes
+      facebook: yes
+      twitter: yes
