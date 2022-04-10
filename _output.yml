@@ -21,12 +21,14 @@ bookdown::markdown_document2:
     pre: "Table"
     sep: ": "
 bookdown::gitbook:
+  css: "style.css"
   number_sections: false
   lib_dir: assets
   split_by: section
+  toc_depth: 2
   config:
     toc:
-      collapse: subsection
+      collapse: section
       scroll_highlight: true
       before: |
         <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG</a></li>
