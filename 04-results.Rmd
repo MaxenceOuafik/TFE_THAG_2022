@@ -1,1 +1,6 @@
 # Résultats
+
+```{r import_data, message=FALSE, warning=FALSE, include=FALSE}
+
+source('scripts/import_data.R')
+```
