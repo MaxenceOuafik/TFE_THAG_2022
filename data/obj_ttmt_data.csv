@@ -1,26 +1,26 @@
-patient;andro_type_M0;andro_pos_M0;andro_type_M3;andro_pos_M3;andro_type_M6;andro_pos_M6;andro_type_M9;andro_pos_M9;andro_type_M12;andro_pos_M12;oestro_type_M0;oestro_pos_M0;oestro_type_M3;oestro_pos_M3;oestro_type_M6;oestro_pos_M6;oestro_type_M9;oestro_pos_M9;oestro_type_M12;oestro_pos_M12;antiand_type_M0;antiand_pos_M0;antiand_type_M3;antiand_pos_M3;antiand_type_M6;antiand_pos_M6;antiand_type_M9;antiand_pos_M9;antiand_type_M12;antiand_pos_M12;cout_an;change_1;raison_change_1;change_2;raison_change_2;change_3;raison_change_3
-SP0;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-J40;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-3TI;;;;;;;;;;;Oestrogel;3;Oestrogel;3;Oestrogel;3;Oestrogel;3;;;Aucun;;Spironolactone;200;Depo-Eligard;12;Depo-Eligard;12;;;773,4;Ajout d'un antiandrogène;Testostéronémie trop élevée;Remplacement de la Spironolactone;Trouble de la concentration;;
-YGF;;;;;;;;;;;Oestrogel;3;Oestrogel;3;;;;;;;;;;;;;;;;;42,1;Arrêt du traitement;Motifs personnels;;;;
-VJ6;;;;;;;;;;;Oestrogel;3;Oestrogel;3;Oestrogel;3;;;;;Aucun;;Aucun;;Aucun;;;;;;42,1;;;;;;
-Y5V;;;;;;;;;;;Oestrogel;3;Dermestril;75;Dermestril;75;Dermestril;100;Dermestril;100;Aucun;;Depo-Eligard;12;Depo-Eligard;12;Depo-Eligard;12;Depo-Eligard;12;956,4;Switch patch;Préférence de la patiente;Ajout d'un anti-androgène;Testostéronémie trop élevée;Majoration de l'oestrogène;Préférence de la patiente
-4TD;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-FQH;;;;;;;;;;;Oestrogel;2,25;Oestrogel;3;;;;;;;Spironolactone;100;Spironolactone;100;;;;;;;62,2;Majoration de l'oestrogène;Oestradiolémie trop basse;;;;
-KCK;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-YKZ;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-HEP;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-IU1;;;;;;;;;;;Oestrogel;3;Dermestril;100;;;;;;;;;;;;;;;;;225,2;Switch patch;Oublis d'application du gel;;;;
-Z5C;;;;;;;;;;;Dermestril;50;Dermestril;50;Dermestril;100;;;;;Aucun;;Aucun;;Spironolactone;100;;;;;245,3;Majoration de l'oestrogène;Oestradiolémie trop basse;Ajout d'un anti-androgène;Testostéronémie trop élevée;;
-S5Z;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-Y80;;;;;;;;;;;Oestrogel;3;Oestrogel;3;Oestrogel;3;Oestrogel;3;;;Aucun;;Aucun;;Aucun;;Aucun;;;;42,1;;;;;;
-TEB;;;;;;;;;;;Oestrogel;3;Zumenon;4;Zumenon;4;Oestrogel;3;;;Spironolactone;100;Depo-Eligard;12;Depo-Eligard;12;Depo-Eligard;12;;;773,4;Switch per os;Préférence de la patiente;Remplacement de la Spironolactone;Crainte de troubles de la concentration;Switch gel;Préférence de la patiente
-D8P;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-3N3;;;;;;;;;;;Oestrogel;1,5;Oestrogel;1,5;Oestrogel;1,5;;;;;Aucun;;Aucun;;Spironolactone;100;;;;;41,2;Ajout d'un antiandrogène;Testostéronémie trop élevée;;;;
-ZT0;Sustanon;21;Nebido;12;Nebido;12;;;;;;;;;;;;;;;;;;;;;;;;;464,8;Switch Nebido;Préférence du patient;;;;
-3FQ;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;21;;;;;;;;;;;;;;;;;;;;;184,2;;;;;;
-97Z;Sustanon;21;Sustanon;21;Sustanon;28;;;;;;;;;;;;;;;;;;;;;;;;;138,2;Allongement intervalle Sustanon;Hématocrite trop élevé;;;;
-F0K;;;;;;;;;;;Oestrogel;1,5;Oestrogel;3;;;;;;;;;;;;;;;;;42,1;Majoration de l'oestrogène;Oestradiolémie trop basse;;;;
-H4K;Sustanon;21;Sustanon;21;Sustanon;21;Sustanon;15;Sustanon;15;;;;;;;;;;;;;;;;;;;;;257,9;Raccourcissement de l'intervalle Sustanon;Fatigue pré-injection;;;;
-5RX;;;;;;;;;;;Oestrogel;2,25;Oestrogel;3;Oestrogel;3;;;;;Spironolactone;100;Spironolactone;100;Spironolactone;100;;;;;62,2;Majoration de l'oestrogène;Oestradiolémie trop basse;;;;
-EEG;;;;;;;;;;;Oestrogel;3;Oestrogel;3;Oestrogel;3;Oestrogel;3;Oestrogel;3;Aucun;;Aucun;;Aucun;;Aucun;;Aucun;;42,1;;;;;;
+patient,andro_type_M0,andro_pos_M0,andro_type_M3,andro_pos_M3,andro_type_M6,andro_pos_M6,andro_type_M9,andro_pos_M9,andro_type_M12,andro_pos_M12,oestro_type_M0,oestro_pos_M0,oestro_type_M3,oestro_pos_M3,oestro_type_M6,oestro_pos_M6,oestro_type_M9,oestro_pos_M9,oestro_type_M12,oestro_pos_M12,antiand_type_M0,antiand_pos_M0,antiand_type_M3,antiand_pos_M3,antiand_type_M6,antiand_pos_M6,antiand_type_M9,antiand_pos_M9,antiand_type_M12,antiand_pos_M12,cout_an,change_1,raison_change_1,change_2,raison_change_2,change_3,raison_change_3
+SP0,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+J40,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+3TI,,,,,,,,,,,Oestrogel,3,Oestrogel,3,Oestrogel,3,Oestrogel,3,,,Aucun,,Spironolactone,200,Depo-Eligard,12,Depo-Eligard,12,,,773.4,Ajout d'un antiandrogène,Testostéronémie trop élevée,Remplacement de la Spironolactone,Trouble de la concentration,,
+YGF,,,,,,,,,,,Oestrogel,3,Oestrogel,3,,,,,,,,,,,,,,,,,42.1,Arrêt du traitement,Motifs personnels,,,,
+VJ6,,,,,,,,,,,Oestrogel,3,Oestrogel,3,Oestrogel,3,,,,,Aucun,,Aucun,,Aucun,,,,,,42.1,,,,,,
+Y5V,,,,,,,,,,,Oestrogel,3,Dermestril,75,Dermestril,75,Dermestril,100,Dermestril,100,Aucun,,Depo-Eligard,12,Depo-Eligard,12,Depo-Eligard,12,Depo-Eligard,12,956.4,Switch patch,Préférence de la patiente,Ajout d'un anti-androgène,Testostéronémie trop élevée,Majoration de l'oestrogène,Préférence de la patiente
+4TD,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+FQH,,,,,,,,,,,Oestrogel,2.25,Oestrogel,3,,,,,,,Spironolactone,100,Spironolactone,100,,,,,,,62.2,Majoration de l'oestrogène,Oestradiolémie trop basse,,,,
+KCK,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+YKZ,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+HEP,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+IU1,,,,,,,,,,,Oestrogel,3,Dermestril,100,,,,,,,,,,,,,,,,,225.2,Switch patch,Oublis d'application du gel,,,,
+Z5C,,,,,,,,,,,Dermestril,50,Dermestril,50,Dermestril,100,,,,,Aucun,,Aucun,,Spironolactone,100,,,,,245.3,Majoration de l'oestrogène,Oestradiolémie trop basse,Ajout d'un anti-androgène,Testostéronémie trop élevée,,
+S5Z,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+Y80,,,,,,,,,,,Oestrogel,3,Oestrogel,3,Oestrogel,3,Oestrogel,3,,,Aucun,,Aucun,,Aucun,,Aucun,,,,42.1,,,,,,
+TEB,,,,,,,,,,,Oestrogel,3,Zumenon,4,Zumenon,4,Oestrogel,3,,,Spironolactone,100,Depo-Eligard,12,Depo-Eligard,12,Depo-Eligard,12,,,773.4,Switch per os,Préférence de la patiente,Remplacement de la Spironolactone,Crainte de troubles de la concentration,Switch gel,Préférence de la patiente
+D8P,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+3N3,,,,,,,,,,,Oestrogel,1.5,Oestrogel,1.5,Oestrogel,1.5,,,,,Aucun,,Aucun,,Spironolactone,100,,,,,41.2,Ajout d'un antiandrogène,Testostéronémie trop élevée,,,,
+ZT0,Sustanon,21,Nebido,12,Nebido,12,,,,,,,,,,,,,,,,,,,,,,,,,464.8,Switch Nebido,Préférence du patient,,,,
+3FQ,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,21,,,,,,,,,,,,,,,,,,,,,184.2,,,,,,
+97Z,Sustanon,21,Sustanon,21,Sustanon,28,,,,,,,,,,,,,,,,,,,,,,,,,138.2,Allongement intervalle Sustanon,Hématocrite trop élevé,,,,
+F0K,,,,,,,,,,,Oestrogel,1.5,Oestrogel,3,,,,,,,,,,,,,,,,,42.1,Majoration de l'oestrogène,Oestradiolémie trop basse,,,,
+H4K,Sustanon,21,Sustanon,21,Sustanon,21,Sustanon,15,Sustanon,15,,,,,,,,,,,,,,,,,,,,,257.9,Raccourcissement de l'intervalle Sustanon,Fatigue pré-injection,,,,
+5RX,,,,,,,,,,,Oestrogel,2.25,Oestrogel,3,Oestrogel,3,,,,,Spironolactone,100,Spironolactone,100,Spironolactone,100,,,,,62.2,Majoration de l'oestrogène,Oestradiolémie trop basse,,,,
+EEG,,,,,,,,,,,Oestrogel,3,Oestrogel,3,Oestrogel,3,Oestrogel,3,Oestrogel,3,Aucun,,Aucun,,Aucun,,Aucun,,Aucun,,42.1,,,,,,
