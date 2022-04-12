@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+data/obj_demog_data.csv
+data/obj_ant_data.csv
