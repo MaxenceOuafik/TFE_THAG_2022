@@ -27,14 +27,14 @@ bookdown::gitbook:
     before_body: 'files/hero-image.html'
   css: "style.css"
   number_sections: false
-  anchor_sections: true
+  anchor_sections: false
   lib_dir: assets
-  split_by: chapter+number
-  toc_depth: 2
+  split_by: chapter
+  toc_depth: 3
   config:
     toc:
       collapse: section
-      scroll_highlight: false
+      scroll_highlight: true
       before: |
         <li class="toc-logo"><a href="./"><img src="files/logo.png"></a></li>
     toolbar:

@@ -138,7 +138,7 @@ font-family: 'Lato', sans-serif;
 
 li.appendix span, li.part span { /* for TOC part names */
   margin-top: 1em;
-  padding-bottom: 0px !important;
+  padding-bottom: 8px;
   color: color: #1c3046 !important;
   opacity: 1 !important;
   text-transform: uppercase;
@@ -168,16 +168,7 @@ a.anchor{
   opacity: 0;
 }
 
-a.anchor-section{
-   opacity: 0;
-}
 
 .hasAnchor:hover a.anchor, a.anchor:hover {
   opacity: 0.6;
-}
-
-@media (max-width: 1144px) { /* dont show anchor link on small screens */
-  .hasAnchor:hover a.anchor {
-visibility: hidden;
-  }
 }
