@@ -2,10 +2,10 @@ bookdown::markdown_document2:
   base_format: officedown::rdocx_document
   reference_docx: "TFE_template.docx"
   page_margins:
-    bottom: 0.4
-    top: 0.4
-    right: 0.4
-    left: 0.4
+    bottom: 1
+    top: 1
+    right: 1
+    left: 1
     header: 0.4
     footer: 0.4
     gutter: 0
@@ -21,22 +21,26 @@ bookdown::markdown_document2:
     pre: "Table"
     sep: ": "
 bookdown::gitbook:
+  includes:
+    before_body: 'files/hero-image.html'
   css: "style.css"
   number_sections: false
   lib_dir: assets
   split_by: section
   toc_depth: 2
+  favicon: "files/favicon.png"
+  cover-image: "files/cover-image.jpg"
+  description: "Travail de fin d'études sur l'initiation du THAG en médecine générale"
   config:
     toc:
       collapse: section
       scroll_highlight: true
       before: |
+        <li class="toc-logo"><a href="./"><img src="files/logo.png"></a></li>
         <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG</a></li>
         <li><a href="https://orcid.org/0000-0002-9795-5721">Dr. Maxence Ouafik</a></li>
       after: |
         <p style="text-align:center">Année 2021-2022 - Université de Liège</p>
-        <a href="http://www.dmguliege.be/"><img src="files/logo.png" width="300" height="144"></a>
-
     toolbar:
       position: fixed
     edit : null
@@ -44,3 +48,6 @@ bookdown::gitbook:
       github: yes
       facebook: yes
       twitter: yes
+   
+
+  

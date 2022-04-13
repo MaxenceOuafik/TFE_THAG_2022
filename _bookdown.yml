@@ -1,4 +1,4 @@
 book_filename : "TFE.Rmd"
 delete_merged_file : true
-output_dir : "./docs"
 rmd_subdir : "_bookdown_files"
+output_dir : "./docs"

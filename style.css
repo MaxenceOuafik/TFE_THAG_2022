@@ -1,3 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 .book .book-body .page-wrapper .page-inner {
   max-width: 1920px !important;
+}
+
+.summary > li:first-child {
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.book .book-summary ul.summary li.divider {
+    height: 0px;
+}
+
+.book.font-family-1 {
+  font-family: 'Lato', sans-serif;
+ }
+ 
+ h1 {
+  font-family: 'Lato', serif;
+  color: #0a3d62;
+}
+
+h2 {
+  font-family: 'Lato', serif;
+  color: #3c6382;
+}
+
+h3 {
+  font-family: 'Lato', serif;
+  color: #60a3bc;
+}
+
+h4 {
+  font-family: 'Lato', serif;
+  color: #82ccdd;
+}
+
+.title {
+  font-family: 'Lato', serif;
+  font-size: 3em !important;
+  color: #0a3d62;
+ }
+ 
+ .subtitle {
+  font-family: 'Lato', serif;
+  color: #3c6382;
+}
+
+/*--- LOGO ---*/
+
+.toc-logo {
+  width: 200px !important;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.summary > li:first-child {
+  height: auto !important; 
+}
+
+/*-----Body Links-------*/
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #82ccdd;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+color: #3c6382; /* darker color when hovering */
+text-decoration: none;
+}
+
+/* HERO IMAGE */
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 390px;
+  background-color: #133454;
+}
+
+.hero-image {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.page-inner {
+  padding-top: 400px !important;
+}
+
+/*------------ TOC --------------*/
+
+.book .book-summary {
+  background: white;
+  border-right: none;
+}
+
+.summary{
+font-family: 'Lato', sans-serif;
+}
+
+
+  /* all TOC list items, basically */
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #0a3d62;
+}
+
+.summary a:hover {
+  color: #3c6382 !important;
+} 
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #82ccdd !important;
+  border-left: solid 4px;
+  border-color: #82ccdd;
+  padding-left: 11px !important;
+}  
+
+li.appendix span, li.part span { /* for TOC part names */
+  margin-top: 1em;
+  color: color: #1c3046 !important;
+  opacity: 1 !important;
+  text-transform: uppercase;
 }
