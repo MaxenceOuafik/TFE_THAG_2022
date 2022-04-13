@@ -1,4 +1,4 @@
-# Annexes {#annexes}
+# Annexes
 
 ## Guide de codage des données subjectives {#codage}
 

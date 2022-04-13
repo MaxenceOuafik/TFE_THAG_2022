@@ -3,3 +3,5 @@ bibliography: references.json
 ---
 
 # Méthodologie
+
+\newpage
