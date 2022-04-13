@@ -4,6 +4,9 @@ subtitle: |
   | Analyse mixte d'une cohorte de patient·e·s et recommandations pour la pratique clinique
 author: "Dr. Maxence Ouafik"
 link-citations: true
+favicon: ["files/favicon.png"]
+cover-image: ["files/cover-image.jpg"]
+description: "Travail de fin d'études sur l'initiation du THAG en médecine générale"
 csl: ["vancouver.csl"]
 bibliography: ["references.json"]
 rmd_files: ("index.Rmd", "01-abstract.Rmd", "02-introduction.Rmd", "03-methodology.Rmd", "04-results.Rmd", "05-discussion.Rmd", "06-conclusion.Rmd", "07-references.Rmd", "08-appendix.Rmd")
@@ -16,6 +19,9 @@ library(officedown)
 library(officer)
 ```
 
-# Remerciements {#remerciements}
+# (PART) Avant-propos {-} 
+
+
+# Remerciements {#remerciements .unnumbered}
 
 \newpage

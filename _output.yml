@@ -20,21 +20,21 @@ bookdown::markdown_document2:
     style: Table Caption
     pre: "Table"
     sep: ": "
+
 bookdown::gitbook:
   includes:
+    in_header: 'files/header.html'
     before_body: 'files/hero-image.html'
   css: "style.css"
   number_sections: false
+  anchor_sections: true
   lib_dir: assets
-  split_by: section
+  split_by: chapter+number
   toc_depth: 2
-  favicon: "files/favicon.png"
-  cover-image: "files/cover-image.jpg"
-  description: "Travail de fin d'études sur l'initiation du THAG en médecine générale"
   config:
     toc:
       collapse: section
-      scroll_highlight: true
+      scroll_highlight: false
       before: |
         <li class="toc-logo"><a href="./"><img src="files/logo.png"></a></li>
     toolbar:
