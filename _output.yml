@@ -37,10 +37,6 @@ bookdown::gitbook:
       scroll_highlight: true
       before: |
         <li class="toc-logo"><a href="./"><img src="files/logo.png"></a></li>
-        <li><a href= "https://asrahal.github.io/TFE_THAG_2022/index.html">L'initiation et le suivi du THAG en MG</a></li>
-        <li><a href="https://orcid.org/0000-0002-9795-5721">Dr. Maxence Ouafik</a></li>
-      after: |
-        <p style="text-align:center">Année 2021-2022 - Université de Liège</p>
     toolbar:
       position: fixed
     edit : null
