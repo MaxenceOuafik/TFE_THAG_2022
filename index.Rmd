@@ -19,8 +19,7 @@ library(officedown)
 library(officer)
 ```
 
-# (PART) Avant-propos {-} 
-
+# (PART) Avant-propos {.unnumbered}
 
 # Remerciements {#remerciements .unnumbered}
 

@@ -41,15 +41,26 @@ h4 {
 
 .title {
   font-family: 'Lato', serif;
-  font-size: 3em !important;
+  font-size: 2.5em !important;
   color: #0a3d62;
+  word-wrap: normal;
+  text-align:center;
  }
  
  .subtitle {
   font-family: 'Lato', serif;
   font-style: normal !important;
   font-weight: 400;
+  color: #60a3bc;
+  text-align:center;
+}
+
+.author {
+  font-family: 'Lato', sans-serif;
+  font-style: normal !important;
+  font-weight: 300;
   color: #3c6382;
+  text-align:center;
 }
 
 /*--- LOGO ---*/
