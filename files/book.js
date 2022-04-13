@@ -6,3 +6,6 @@ $(document).ready(function() {
     $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
   });
 });
+
+const scrollTrigger = document.getElementById('scroll-trigger');
+const target = document.getElementById('target');
