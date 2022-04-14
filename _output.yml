@@ -2,24 +2,27 @@ bookdown::markdown_document2:
   base_format: officedown::rdocx_document
   reference_docx: "TFE_template.docx"
   page_margins:
-    bottom: 1
-    top: 1
-    right: 1
-    left: 1
-    header: 0.4
+    bottom: 0.9
+    top: 0.9
+    right: 0.9
+    left: 0.9
+    header: 0
     footer: 0.4
     gutter: 0
   plots:
     style: Normal
     align: center
     caption:
-      style: Image Caption
+      style: Caption
       pre: 'Figure '
       sep: ': '
+      align: center
   tables:
-    style: Table Caption
-    pre: "Table"
-    sep: ": "
+    style: Table
+    caption:
+      style: 'Légende1'
+      pre: "Tableau"
+      sep: ": "
 
 bookdown::gitbook:
   includes:

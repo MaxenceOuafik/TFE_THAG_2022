@@ -20,5 +20,5 @@ unlink(c('output/TFE.docx',
          'output/TFE1.docx',
          'output/reference-keys.txt'))
 
-
+render_book('index.Rmd', output_format = 'bookdown::gitbook')
 

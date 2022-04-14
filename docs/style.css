@@ -183,3 +183,9 @@ a.anchor{
 .hasAnchor:hover a.anchor, a.anchor:hover {
   opacity: 0.6;
 }
+
+.book .book-body .page-wrapper .page-inner section.normal img {
+    border: 0;
+    max-width: 100%;
+}
+    
