@@ -25,7 +25,7 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
            'Changement de prénom' = pren,
            "Changement de genre à l'état-civil" = cec)) %>%
   tbl_summary(by = Genres, type = all_continuous() ~ 'continuous2',
-              statistic = all_continuous() ~ c('{mean} ({sd})', '{min} - {max}')) %>%
+              statistic = all_continuous() ~ c('{median}', '[{min} - {max}]')) %>%
   modify_header(label = '**Caractéristiques**') %>%
   bold_labels() %>%
   add_overall() %>%
@@ -39,7 +39,7 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
 .demog_ft <- bg(.demog_ft, bg = '#60a3bc', part = 'header')
 
 .demog_ft <- .demog_ft %>%
-  compose(i = 2, j = 1, as_paragraph((as_chunk('Moyenne (Écart-type)')))) %>%
+  compose(i = 2, j = 1, as_paragraph((as_chunk('Médiane')))) %>%
   compose(i = 3, j = 1, as_paragraph((as_chunk('Minimum - Maximum')))) %>%
   set_header_labels(stat_0 = "Total, N = 25") %>%
   bold(part = "header") %>%
