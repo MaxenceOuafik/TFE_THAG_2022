@@ -46,8 +46,6 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
   bold(j = 2, part = 'body') %>%
   color(color = "white", part = "header") %>%
   border_outer(border = .outer.border, part = "header") %>%
-  align(j = 2, align = 'right', part = 'header') %>%
-  align(j = 2, align = 'right', part = 'body') %>%
   font(fontname = 'Lato Light', part = 'body') %>%
   font(fontname = 'Lato Bold', part = 'header')
 
