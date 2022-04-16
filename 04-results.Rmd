@@ -32,7 +32,7 @@ L'âge des participants variait entre `r min(obj_demog_data$age)` et `r max(obj_
 source('scripts/demog_table.R', encoding = 'UTF-8')
 ```
 
-```{r demog_table_html, echo=FALSE, warning=FALSE, message=FALSE, tab.id = "DemogTab", eval = knitr::is_html_output()}
+```{r demog_table_html, echo=FALSE, warning=FALSE, message=FALSE, tab.id = "DemogTab", out.width = '100%', eval = knitr::is_html_output()}
 
 .demog_ft
 ```
