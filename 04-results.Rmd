@@ -27,13 +27,17 @@ knitr::include_graphics('files/sample_flowchart.png', dpi = 72)
 
 L'âge des participants variait entre `r min(obj_demog_data$age)` et `r max(obj_demog_data$age)` ans (âge médian : `r round(median(obj_demog_data$age))` ans). L'échantillon se composait de `r sum(obj_demog_data$genre == "F")` femmes transgenres, `r sum(obj_demog_data$genre == "M")` hommes transgenres, `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'F')` personnes non-binaires transmasculines, et `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'M')` personne non-binaire transféminine. `r percent(sum(obj_demog_data$province == 'Liege')/nrow(obj_demog_data))` des participant·e·s vivaient dans la Province de Liège. Au niveau du statut mutuelle, `r sum(obj_demog_data$mutuelle == 'BIM')` participant·e·s étaient BIM (soit `r percent(sum(obj_demog_data$mutuelle == 'BIM')/nrow(obj_demog_data))` ) et `r sum(obj_demog_data$mutuelle == "Non-inscrit")` n'étaient pas en ordre de mutuelle. Enfin, au niveau administratif, `r percent((sum(obj_demog_data$adm_pren == '1')+sum(obj_demog_data$adm_pren == '2'))/nrow(obj_demog_data))` des participant·e·s avaient modifié leur prénom à l'état-civil et `r percent((sum(obj_demog_data$adm_cec == '1')+sum(obj_demog_data$adm_cec == '2'))/nrow(obj_demog_data))` avaient modifié leur marqueur de genre. Toutes ces caractéristiques démographiques sont résumées dans le tableau \@ref(tab:DemogTab).
 
-```{r demog_table_html, echo=FALSE, warning=FALSE, message=FALSE, tab.id = "DemogTab", eval = knitr::is_html_output()}
+```{r demog_table, include=FALSE}
+
 source('scripts/demog_table.R', encoding = 'UTF-8')
+```
+
+```{r demog_table_html, echo=FALSE, warning=FALSE, message=FALSE, tab.id = "DemogTab", eval = knitr::is_html_output()}
+
 .demog_ft
 ```
 
 ```{r demog_table_word, echo=FALSE, warning=FALSE, message=FALSE, tab.id = "DemogTab", eval = !knitr::is_html_output()}
-source('scripts/demog_table.R', encoding = 'UTF-8')
 .demog_ft_word
 ```
 
@@ -46,3 +50,23 @@ source('scripts/ant_data_manipulation.R', encoding = 'UTF-8')
 ```
 
 Les problèmes de santé les plus représentés dans l'échantillon étaient des problèmes de santé mentale, avec `r .N_dep` patient·e·s présentant un trouble dépressif majeur (soit `r .p_dep` de l'échantillon), `r .N_anx` patient présentant un trouble anxieux et `r .N_alc` patiente présentant un mésusage d'alcool. Les autres problèmes de santé retrouvés dans l'échantillon n'étaient présents qu'une fois : anémie ferriprive, asthme, BPCO, eczéma, syndrome de Fanconi, syndrome des ovaires micropolykystiques, rhinite chronique, et thrombophilie. En outre, `r .N_TSA_F` patientes se situaient sur le spectre autistique.
+
+## Données subjectives
+
+### Contexte social
+
+La figure \@ref(fig:FamPlot)
+
+```{r fam_plot, include=FALSE}
+source('scripts/create_fam_plot.R', encoding = 'UTF-8')
+```
+
+```{r FamPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Membres de la famille auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.width=6.7, fig.height=4, out.width = '100%', fig.retina=2, eval = knitr::is_html_output()}
+
+.anim_fam_plot
+```
+
+```{r fam_plot_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "FamPlot", fig.cap="Membres de la famille auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.width=6.7, fig.height=4, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('output/plots/fam_plot.png')
+```

@@ -188,4 +188,9 @@ a.anchor{
     border: 0;
     max-width: 100%;
 }
+
+.figure {
+    max-width: 1500px;
+    min-width: 650px;
+}
     

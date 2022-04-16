@@ -10,7 +10,6 @@ bookdown::markdown_document2:
     footer: 0.4
     gutter: 0
   plots:
-    style: Normal
     align: center
     caption:
       style: Caption
