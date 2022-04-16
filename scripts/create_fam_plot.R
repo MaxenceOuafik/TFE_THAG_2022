@@ -40,17 +40,15 @@ levels(.count_fam_reac$fam_reac) <- c("Réaction négative",
                                                 y = n,
                                                 fill = transition,
                                                 text = paste0("Nombre de participant·e·s : ", n))) +
-  geom_bar(stat = 'identity', 
-           position = 'dodge',
-           width = 0.5) +
-  labs(title = str_wrap("Personnes de la famille auxquelles les participant·e·s ont annoncé leur transidentité", 56),
-       x = "Nombre de participant·e·s",
-       y = "Personnes de la famille",
+  geom_col(position = position_dodge2(preserve = 'single'),
+           width = 0.8) +
+  labs(title = "Personnes de la famille auxquelles les participant·e·s ont annoncé leur transidentité",
+       y = "Nombre de participant·e·s",
+       x = "Personnes de la famille",
        fill = "Genres") +
-  .TFE_theme + 
+  .TFE_theme_Word + 
   scale_fill_manual (values = .myColors) +
-  scale_y_continuous(breaks = c(0:6)) +
-  scale_x_discrete(labels = label_wrap(10))
+  scale_y_continuous(breaks = c(0:6))
 
 
 ggsave("output/plots/fam_plot.png",
@@ -61,11 +59,15 @@ ggsave("output/plots/fam_plot.png",
        dpi = 300,
        scale = 1.6)
 
-.anim_fam_plot <- ggplotly(.fam_plot, tooltip = "text") %>%
+.fam_plot_HTML <- .fam_plot +
+  .TFE_theme_HTML
+
+.anim_fam_plot <- ggplotly(.fam_plot_HTML, tooltip = "text") %>%
   plotly::style(hoverlabel = .label) %>%
   layout(font = .font,
          yaxis = list(fixedrange = TRUE),
-         xaxis= list(fixedrange = TRUE)) %>%
+         xaxis= list(fixedrange = TRUE),
+         title= list(layout.title.pad = 20)) %>%
   config(displayModeBar = FALSE)
   
 

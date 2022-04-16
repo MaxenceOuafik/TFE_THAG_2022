@@ -61,7 +61,7 @@ La figure \@ref(fig:FamPlot)
 source('scripts/create_fam_plot.R', encoding = 'UTF-8')
 ```
 
-```{r FamPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Membres de la famille auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.width=6.7, fig.height=4, out.width = '100%', fig.retina=2, eval = knitr::is_html_output()}
+```{r FamPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Membres de la famille auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.dim=c(10,8), out.width = '100%', eval = knitr::is_html_output()}
 
 .anim_fam_plot
 ```

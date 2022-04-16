@@ -14,7 +14,7 @@ library(ggthemes)
   font = .font
 )
 
-.TFE_theme <- theme_fivethirtyeight() +
+.TFE_theme_Word <- theme_fivethirtyeight() +
   theme(axis.title = element_text(family = 'Lato Light',
                                   size = 12,
                                   color = '#60a3bc'),
@@ -24,3 +24,7 @@ library(ggthemes)
                                   color = '#3c6382'),
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato')) 
+
+.TFE_theme_HTML <- .TFE_theme_Word +
+  theme(axis.text.x = element_text(angle = 90),
+        plot.title = element_blank())
