@@ -55,7 +55,7 @@ Les problèmes de santé les plus représentés dans l'échantillon étaient des
 
 ### Contexte social
 
-La figure \@ref(fig:FamPlot)
+Une des questions que je pose à l'anamnèse de la première consultation est de savoir si un *coming out* a été fait à la famille et, si oui, auprès de quels membres. La figure \@ref(fig:FamPlot) montre une représentation graphique des réponses à cette question dans l'échantillon. Lors de l'élaboration de ce graphique, les hommes transgenres et personnes non-binaires transmasculines ont été fusionnées dans la catégorie "personnes transmasculines" tandis que les femmes transgenres et les personnes non-binaires transféminines ont été réunies dans la catégories "personnes transféminines". En effet, ce sont
 
 ```{r fam_plot, include=FALSE}
 source('scripts/create_fam_plot.R', encoding = 'UTF-8')

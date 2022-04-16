@@ -7,8 +7,8 @@ source('scripts/create_plot_theme.R')
   filter(!is.na(fam_pers)) %>%
   select(patient, fam_pers, sexe, genre) %>%
   mutate(transition = as.factor(ifelse(sexe == 'M'|sexe == 'I',
-                       'Personne transféminine',
-                       'Personne transmasculine'))) %>%
+                       'Personnes transféminines',
+                       'Personnes transmasculines'))) %>%
   group_by(transition) %>%
   count(fam_pers)
  
@@ -39,7 +39,7 @@ levels(.count_fam_reac$fam_reac) <- c("Réaction négative",
 .fam_plot <- ggplot(data = .count_fam_pers, aes(x = reorder(fam_pers, -n), 
                                                 y = n,
                                                 fill = transition,
-                                                text = paste0("Nombre de participant·e·s : ", n))) +
+                                                text = paste0("Nombre de participant·e·s : ", n, '\n', 'Genre : ', transition))) +
   geom_col(position = position_dodge2(preserve = 'single'),
            width = 0.8) +
   labs(title = "Personnes de la famille auxquelles les participant·e·s ont annoncé leur transidentité",
@@ -60,14 +60,16 @@ ggsave("output/plots/fam_plot.png",
        scale = 1.6)
 
 .fam_plot_HTML <- .fam_plot +
-  .TFE_theme_HTML
+  .TFE_theme_HTML +
+  labs(title = NULL)
 
-.anim_fam_plot <- ggplotly(.fam_plot_HTML, tooltip = "text") %>%
+.anim_fam_plot <- ggplotly(.fam_plot_HTML, tooltip = 'text') %>%
   plotly::style(hoverlabel = .label) %>%
   layout(font = .font,
          yaxis = list(fixedrange = TRUE),
          xaxis= list(fixedrange = TRUE),
-         title= list(layout.title.pad = 20)) %>%
+         title= list(layout.title.pad = 20),
+         legend = list(orientation = 'h', y = 110)) %>%
   config(displayModeBar = FALSE)
   
 
