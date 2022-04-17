@@ -1,8 +1,8 @@
-library(scales)
 library(dplyr)
+requireNamespace('scales')
 
 .N_dep <- sum(obj_ant_data$elem_med_1 == "depression", na.rm = T)
-.p_dep <- percent(.N_dep/nrow(obj_ant_data))
+.p_dep <- scales::percent(.N_dep/nrow(obj_ant_data))
 .N_anx <- sum(obj_ant_data$elem_med_1 == "trouble anxieux", na.rm = T)
 .N_alc <- sum(obj_ant_data$elem_med_2 == "mesusage d'alcool", na.rm = T)
 

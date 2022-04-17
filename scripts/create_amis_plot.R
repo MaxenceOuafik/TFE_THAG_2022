@@ -1,6 +1,7 @@
-library(plotly)
 source('scripts/manipulate_soc_data.R', encoding = 'UTF-8')
 source('scripts/create_plot_theme.R')
+
+requireNamespace('plotly')
 
 .amis_plot <- ggplot(data = .count_amis_pers, aes(x = reorder(amis_pers, -n), 
                                                   y = n,
@@ -26,14 +27,14 @@ ggsave("output/plots/amis_plot.png",
        scale = 1.6)
 
 .amis_plot_HTML <- .amis_plot +
-  .TFE_theme_HTML +
+  theme(axis.text.x = element_text(angle = 90)) +
   labs(title = NULL)
 
-.anim_amis_plot <- ggplotly(.amis_plot_HTML, tooltip = 'text') %>%
+.anim_amis_plot <- plotly::ggplotly(.amis_plot_HTML, tooltip = 'text') %>%
   plotly::style(hoverlabel = .label) %>%
-  layout(font = .font,
+  plotly::layout(font = .font,
          yaxis = list(fixedrange = TRUE),
          xaxis= list(fixedrange = TRUE),
          title= list(layout.title.pad = 20),
          legend = list(orientation = 'h', y = 110)) %>%
-  config(displayModeBar = FALSE)
+  plotly::config(displayModeBar = FALSE)

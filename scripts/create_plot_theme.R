@@ -25,5 +25,4 @@ library(ggthemes)
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato')) 
 
-.TFE_theme_HTML <- .TFE_theme_Word +
-  theme(axis.text.x = element_text(angle = 90))
+.TFE_theme_HTML <- .TFE_theme_Word 

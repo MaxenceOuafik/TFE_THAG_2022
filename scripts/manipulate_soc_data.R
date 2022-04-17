@@ -1,4 +1,7 @@
 library(dplyr)
+requireNamespace('scales')
+
+
 .count_fam_pers <- subj_soc_data %>%
   left_join(obj_demog_data, by = 'patient') %>%
   filter(!is.na(fam_pers)) %>%
@@ -38,7 +41,7 @@ levels(.count_fam_reac$fam_reac) <- c("Réaction négative",
                                                .count_fam_pers$fam_pers!='Les deux parents' & 
                                                .count_fam_pers$transition=='Personnes transféminines'])
 
-.p_reac_neg <- percent(sum(.count_fam_reac$n[.count_fam_reac$fam_reac != 'Réaction positive'])/
+.p_reac_neg <- scales::percent(sum(.count_fam_reac$n[.count_fam_reac$fam_reac != 'Réaction positive'])/
                          sum(.count_fam_reac$n))
 
 .N_transmasc_neg <- sum(.count_fam_reac$n[.count_fam_reac$transition=='Personne transmasculine' &

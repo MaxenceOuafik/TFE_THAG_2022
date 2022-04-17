@@ -1,6 +1,6 @@
-library(plotly)
 source('scripts/manipulate_soc_data.R', encoding = 'UTF-8')
 source('scripts/create_plot_theme.R')
+requireNamespace('plotly')
 
 .fam_plot <- ggplot(data = .count_fam_pers, aes(x = reorder(fam_pers, -n), 
                                                 y = n,
@@ -26,17 +26,17 @@ ggsave("output/plots/fam_plot.png",
        scale = 1.6)
 
 .fam_plot_HTML <- .fam_plot +
-  .TFE_theme_HTML +
+  theme(axis.text.x = element_text(angle = 90)) +
   labs(title = NULL)
 
-.anim_fam_plot <- ggplotly(.fam_plot_HTML, tooltip = 'text') %>%
+.anim_fam_plot <- plotly::ggplotly(.fam_plot_HTML, tooltip = 'text') %>%
   plotly::style(hoverlabel = .label) %>%
-  layout(font = .font,
+  plotly::layout(font = .font,
          yaxis = list(fixedrange = TRUE),
          xaxis= list(fixedrange = TRUE),
          title= list(layout.title.pad = 20),
          legend = list(orientation = 'h', y = 110)) %>%
-  config(displayModeBar = FALSE)
+  plotly::config(displayModeBar = FALSE)
   
 
 
