@@ -41,7 +41,7 @@ source('scripts/demog_table.R', encoding = 'UTF-8')
 .demog_ft_word
 ```
 
-\newpage
+Pour le reste des résultats de ce TFE, les hommes transgenres et personnes non-binaires transmasculines ont été fusionnées dans la catégorie "personnes transmasculines" tandis que les femmes transgenres et les personnes non-binaires transféminines ont été réunies dans la catégories "personnes transféminines" afin d'obtenir suffisamment de cas dans chaque case.
 
 ### Problèmes de santé
 
@@ -55,11 +55,14 @@ Les problèmes de santé les plus représentés dans l'échantillon étaient des
 
 ### Contexte social
 
-Une des questions que je pose à l'anamnèse de la première consultation est de savoir si un *coming out* a été fait à la famille et, si oui, auprès de quels membres. La figure \@ref(fig:FamPlot) montre une représentation graphique des réponses à cette question dans l'échantillon. Lors de l'élaboration de ce graphique, les hommes transgenres et personnes non-binaires transmasculines ont été fusionnées dans la catégorie "personnes transmasculines" tandis que les femmes transgenres et les personnes non-binaires transféminines ont été réunies dans la catégories "personnes transféminines". En effet, ce sont
-
 ```{r fam_plot, include=FALSE}
 source('scripts/create_fam_plot.R', encoding = 'UTF-8')
+source('scripts/create_amis_plot.R', encoding = 'UTF-8')
 ```
+
+Une des questions que je pose à l'anamnèse de la première consultation est de savoir si un *coming out* a été fait et, si oui, auprès de quelles personnes et avec quelles réactions. L'objectif de cette question est d'évaluer le degré de soutien social dans le processus de transition. La figure \@ref(fig:FamPlot) montre une représentation graphique du coming out familial des patient·e·s de l'échantillon. Les patients transmasculins de l'échantillon avaient tous au moins fait leur coming out à leurs deux parents tandis que `r .N_transfem_conceal` patientes transféminines sur `r .N_transfem` n'avaient fait leur coming out qu'à une partie de leur famille, voire à personne pour l'une d'entre elles. A noter que l'information étaient absente du dossier pour `r sum(is.na(subj_soc_data$fam_pers))` patients transmasculins.
+
+Parmi les patient·e·s ayant fait un coming out à leur famille, `r .p_reac_neg` n'ont pas eu une réaction positive de cette dernière.
 
 ```{r FamPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Membres de la famille auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.dim=c(10,8), out.width = '100%', eval = knitr::is_html_output()}
 
@@ -70,3 +73,45 @@ source('scripts/create_fam_plot.R', encoding = 'UTF-8')
 
 knitr::include_graphics('output/plots/fam_plot.png')
 ```
+
+Au niveau amical, la figure \@ref(fig:AmisPlot) montre un pattern similaire à ce qui a été décrit pour le *coming out* familial avec une moins grande tendance des personnes transféminines à révéler leur transidentité à leurs proches. Ces résultats doivent toutefois être interprétés prudemment dans la mesure où il manque des données pour 9 participant·e·s (5 personnes transféminines et 4 transmasculines). Toutefois, puisque les valeurs manquantes ne touchaient pas disproportionnent un groupe et que les résultats étaient cohérents avec ceux de la figure \@ref(fig:FamPlot), j'ai choisi de présenter ce graphique. En ce qui concerne la réaction des ami·e·s, celle-ci a été positive pour la totalité de l'échantillon.
+
+```{r AmisPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Ami·e·s auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.dim=c(10,8), out.width = '100%', eval = knitr::is_html_output()}
+
+.anim_amis_plot
+```
+
+```{r amis_plot_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "AmisPlot", fig.cap="Ami·e·s auxquel·le·s les participant·e·s ont annoncé leur transidentité, par genre", fig.width=6.7, fig.height=4, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('output/plots/amis_plot.png')
+```
+
+### Attentes vis-à-vis du THAG
+
+```{r subj_horm_data, include= FALSE}
+source('scripts/manipulate_subj_horm_data.R', encoding = 'UTF-8')
+```
+
+Afin de mieux cerner les attentes des patient·e·s et de leur proposer un traitement le plus adapté à ces dernières, je leur demande ensuite s'iels connaissent les effets du THAG et, si oui, s'iels identifient des effets particulièrement importants pour leur point de confort actuel.
+
+Pour les personnes transféminines, les effets les plus souvent mentionnés comme prioritaires étaient : une majoration de la poitrine ( `r .p_prio_poit` des patientes), une répartition plus féminine des graisses (`r .p_prio_gras_F`), une diminution de la pilosité (`r .p_prio_pilo_F`), et un arrêt de la progression de l'alopécie androgénique (`r .p_prio_alo`). Un·e patient·e avait mentionné l'adoucissement de la peau tandis qu'aucun·e patient·e n'avait explicitement évoqué la diminution des érections spontanées ou la diminution de la masse musculaire comme étant une priorité.
+
+Pour les personnes transmasculines, l'aggravation de la voix était l'effet le plus souvent recherché. Il s'agissait d'une priorité pour `r .p_prio_voix` des patient·e·s. Une répartition plus masculine des graisses et une majoration de la musculature étaient une priorité pour `r .p_prio_gras_M` des patient·e·s. `r .p_prio_pilo_M` des patient·e·s considéraient la majoration de leur pilosité comme une priorité tandis qu'un·e des patient·e·s avait mentionné l'accroissement du dickclit. Aucun·e n'avait cité l'aménorrhée comme étant sa priorité à l'initiation du THAG.
+
+Au niveau des inquiétudes vis-à-vis de l'instauration du THAG, deux patient·e·s ont mentionné l'alopécie, un·e patient·e a évoqué l'acné, et un·e patient·e avait peur d'avoir une humeur plus instable à l'instauration du traitement.
+
+Vu les impacts du THAG sur la fertilité mentionnés dans l'introduction, je demande aux patient·e·s s'iels sont intéressé·e·s par la cryopréservation de leurs gamètes avant d'instaurer le THAG. Aucun patient transmasculin de l'échantillon n'a choisi de congeler ses gamètes avant THAG tandis que `r sum(subj_horm_data$cryo == '1')` patientes transféminines ont préféré entamer les démarches de cryopréservation avant de commencer le THAG.
+
+### Besoins chirurgicaux
+
+```{r chir_data, include=FALSE}
+source('scripts/manipulate_subj_chir_data.R', encoding = 'UTF-8')
+```
+
+Toujours dans le but d'appréhender au mieux les besoins des patient·e·s, de les informer au mieux, et de les référer vers les spécialistes adéquat·e·s, je leur demandais s'iels identifient déjà à ce stade des chirurgies nécessaires pour les rapprocher de leurs points de confort.
+
+Pour les patientes transféminines, la chirurgie la plus souvent identifiée comme nécessaire était la vaginoplastie (`r .p_vag2` des patient·e·s), suivie par les FFS (`r .p_ffs2`). Une patiente avait mentionné l'augmentation mammaire et aucun·e n'avait considéré les chirurgies vocales. En plus des patient·e·s ayant déjà une idée précise des chirurgies qui leur semblent nécessaires, `r .N_ffs1` patient·e·s hésitaient sur la FFS et une, sur la vaginoplastie. Dans l'ensemble, en ne comptant pas les patient·e·s qui hésitaient, `r .N_chir0` patient·e·s n'envisageaient aucune chirurgie, `r .N_chir1` patient·e·s en envisageaient une et `r .N_chir2` en envisageait deux.
+
+La torsoplastie était considérée comme nécessaire par `r .p_torso2` des patient·e·s transmasculin·e·s tandis que les `r .p_torso1` restant·e·s y réfléchissaient encore lors de la première consultation. L'hystérectomie était envisagée par `r .p_hystero` des patient·e·s. Aucun·e patient·e n'envisageait de chirurgie génitale. Dans l'ensemble, en ne prenant en compte que les patient·e·s qui étaient sûrs de leur choix, `r .N_chir0M` patients n'envisageaient aucune chirurgie, `r .N_chir1M` en envisageaient une, et `r .N_chir2M` en envisageaient deux.
+
+A la rédaction de ce TFE, aucune patiente transféminine n'avait réalisé de chirurgie. Dans le même temps, `r sum(obj_chir_data$real_torso == '2', na.rm = T)` patient·e·s transmasculin·e·s ont bénéficié d'une torsoplastie après l'initiation du THAG tandis que `r sum(obj_chir_data$real_torso == '3', na.rm = T)` patient·e·s avaient réalisé leur torsoplastie avant la première consultation. Enfin, `r sum(obj_chir_data$real_hystero == '2', na.rm = T)` patient·e a réalisé une hystérectomie afin de se rapprocher de son point de confort.

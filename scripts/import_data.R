@@ -8,7 +8,7 @@ obj_demog_data <- read_csv("./data/obj_demog_data.csv",
                                             adm_pren = readr::col_factor(levels = c("0", "1", "2", "3")), 
                                             adm_cec = readr::col_factor(levels = c("0", "1", "2"))))
 
-sub_chir_data <- read_csv("./data/sub_chir_data.csv", 
+subj_chir_data <- read_csv("./data/subj_chir_data.csv", 
                           col_types = cols(bes_mam = readr::col_factor(levels = c("0","1", "2")), 
                                            bes_vag = readr::col_factor(levels = c("0","1", "2")), 
                                            bes_ffs = readr::col_factor(levels = c("0", "1", "2")), 
