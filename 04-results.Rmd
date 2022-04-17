@@ -1,15 +1,9 @@
 # Résultats
 
-```{r load_packages, include=FALSE}
-library(dplyr)
-library(flextable)
-
-```
-
 ```{r import_data, message=FALSE, warning=FALSE, include=FALSE}
 
 source('scripts/import_data.R')
-library(scales)
+requireNamespace('scales')
 ```
 
 ## Participant·e·s
@@ -25,7 +19,7 @@ knitr::include_graphics('files/sample_flowchart.png', dpi = 72)
 
 ### Caractéristiques démographiques
 
-L'âge des participants variait entre `r min(obj_demog_data$age)` et `r max(obj_demog_data$age)` ans (âge médian : `r round(median(obj_demog_data$age))` ans). L'échantillon se composait de `r sum(obj_demog_data$genre == "F")` femmes transgenres, `r sum(obj_demog_data$genre == "M")` hommes transgenres, `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'F')` personnes non-binaires transmasculines, et `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'M')` personne non-binaire transféminine. `r percent(sum(obj_demog_data$province == 'Liege')/nrow(obj_demog_data))` des participant·e·s vivaient dans la Province de Liège. Au niveau du statut mutuelle, `r sum(obj_demog_data$mutuelle == 'BIM')` participant·e·s étaient BIM (soit `r percent(sum(obj_demog_data$mutuelle == 'BIM')/nrow(obj_demog_data))` ) et `r sum(obj_demog_data$mutuelle == "Non-inscrit")` n'étaient pas en ordre de mutuelle. Enfin, au niveau administratif, `r percent((sum(obj_demog_data$adm_pren == '1')+sum(obj_demog_data$adm_pren == '2'))/nrow(obj_demog_data))` des participant·e·s avaient modifié leur prénom à l'état-civil et `r percent((sum(obj_demog_data$adm_cec == '1')+sum(obj_demog_data$adm_cec == '2'))/nrow(obj_demog_data))` avaient modifié leur marqueur de genre. Toutes ces caractéristiques démographiques sont résumées dans le tableau \@ref(tab:DemogTab).
+L'âge des participants variait entre `r min(obj_demog_data$age)` et `r max(obj_demog_data$age)` ans (âge médian : `r round(median(obj_demog_data$age))` ans). L'échantillon se composait de `r sum(obj_demog_data$genre == "F")` femmes transgenres, `r sum(obj_demog_data$genre == "M")` hommes transgenres, `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'F')` personnes non-binaires transmasculines, et `r sum(obj_demog_data$genre == "NB" & obj_demog_data$sexe == 'M')` personne non-binaire transféminine. `r scales::percent(sum(obj_demog_data$province == 'Liege')/nrow(obj_demog_data))` des participant·e·s vivaient dans la Province de Liège. Au niveau du statut mutuelle, `r sum(obj_demog_data$mutuelle == 'BIM')` participant·e·s étaient BIM (soit `r scales::percent(sum(obj_demog_data$mutuelle == 'BIM')/nrow(obj_demog_data))` ) et `r sum(obj_demog_data$mutuelle == "Non-inscrit")` n'étaient pas en ordre de mutuelle. Enfin, au niveau administratif, `r scales::percent((sum(obj_demog_data$adm_pren == '1')+sum(obj_demog_data$adm_pren == '2'))/nrow(obj_demog_data))` des participant·e·s avaient modifié leur prénom à l'état-civil et `r scales::percent((sum(obj_demog_data$adm_cec == '1')+sum(obj_demog_data$adm_cec == '2'))/nrow(obj_demog_data))` avaient modifié leur marqueur de genre. Toutes ces caractéristiques démographiques sont résumées dans le tableau \@ref(tab:DemogTab).
 
 ```{r demog_table, include=FALSE}
 
@@ -50,6 +44,25 @@ source('scripts/ant_data_manipulation.R', encoding = 'UTF-8')
 ```
 
 Les problèmes de santé les plus représentés dans l'échantillon étaient des problèmes de santé mentale, avec `r .N_dep` patient·e·s présentant un trouble dépressif majeur (soit `r .p_dep` de l'échantillon), `r .N_anx` patient présentant un trouble anxieux et `r .N_alc` patiente présentant un mésusage d'alcool. Les autres problèmes de santé retrouvés dans l'échantillon n'étaient présents qu'une fois : anémie ferriprive, asthme, BPCO, eczéma, syndrome de Fanconi, syndrome des ovaires micropolykystiques, rhinite chronique, et thrombophilie. En outre, `r .N_TSA_F` patientes se situaient sur le spectre autistique.
+
+### Durée du suivi
+
+```{r followup, include = FALSE}
+source('scripts/create_long_data.R', encoding = 'UTF-8')
+source('scripts/create_follow_up_plot.R', encoding = 'UTF-8')
+```
+
+Les participants·e·s de l'étude ont été suivis entre `r min(.followup_time$followup)` et `r max(.followup_time$followup)` jours avec une durée médiane de `r median(.followup_time$followup)` jours. En termes de consultation de suivi, `r nrow(.followup_time)` patient·e·s ont été suivi·e·s au moins jusqu'à la première consultation trimestrielle (T1), `r sum(.followup_time$followup > 100)` patient·e·s, jusqu'à la deuxième (T2), `r sum(.followup_time$followup > 229)`, jusqu'à la troisième (T3), et `r sum(.followup_time$followup > 300)`, jusqu'à la quatrième (T4). Un·e seul·e patient·e a été perdu·e de vue, suite à sa décision d'interrompre le THAG. Comme le montre la figure \@ref(fig:FollowPlot), la répartition par genres reste globalement équilibrée. On constate davantage de personnes transféminines jusqu'à T3 inclus. Cela est dû au fait que j'avais un peu plus de patient·e·s transmasculin·e·s quand j'ai commencé à faire des suivis hormonaux, ce qui fut vite contrebalancé.
+
+```{r FollowPlot, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Nombre de patient·e·s par consultation trimestrielle et par genre", fig.dim=c(10,8), out.width = '100%', eval = knitr::is_html_output()}
+
+.anim_followup_plot
+```
+
+```{r followup_plot_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "FollowPlot", fig.cap="Nombre de patient·e·s par consultation trimestrielle et par genre", fig.width=6.7, fig.height=4, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('output/plots/followup_plot.png')
+```
 
 ## Données subjectives
 
@@ -115,3 +128,7 @@ Pour les patientes transféminines, la chirurgie la plus souvent identifiée com
 La torsoplastie était considérée comme nécessaire par `r .p_torso2` des patient·e·s transmasculin·e·s tandis que les `r .p_torso1` restant·e·s y réfléchissaient encore lors de la première consultation. L'hystérectomie était envisagée par `r .p_hystero` des patient·e·s. Aucun·e patient·e n'envisageait de chirurgie génitale. Dans l'ensemble, en ne prenant en compte que les patient·e·s qui étaient sûrs de leur choix, `r .N_chir0M` patients n'envisageaient aucune chirurgie, `r .N_chir1M` en envisageaient une, et `r .N_chir2M` en envisageaient deux.
 
 A la rédaction de ce TFE, aucune patiente transféminine n'avait réalisé de chirurgie. Dans le même temps, `r sum(obj_chir_data$real_torso == '2', na.rm = T)` patient·e·s transmasculin·e·s ont bénéficié d'une torsoplastie après l'initiation du THAG tandis que `r sum(obj_chir_data$real_torso == '3', na.rm = T)` patient·e·s avaient réalisé leur torsoplastie avant la première consultation. Enfin, `r sum(obj_chir_data$real_hystero == '2', na.rm = T)` patient·e a réalisé une hystérectomie afin de se rapprocher de son point de confort.
+
+## Données objectives
+
+### Paramètres
