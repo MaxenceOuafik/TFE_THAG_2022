@@ -60,7 +60,7 @@ source('scripts/create_fam_plot.R', encoding = 'UTF-8')
 source('scripts/create_amis_plot.R', encoding = 'UTF-8')
 ```
 
-Une des questions que je pose à l'anamnèse de la première consultation est de savoir si un *coming out* a été fait et, si oui, auprès de quelles personnes et avec quelles réactions. L'objectif de cette question est d'évaluer le degré de soutien social dans le processus de transition. La figure \@ref(fig:FamPlot) montre une représentation graphique du coming out familial des patient·e·s de l'échantillon. Les patients transmasculins de l'échantillon avaient tous au moins fait leur coming out à leurs deux parents tandis que `r .N_transfem_conceal` patientes transféminines sur `r .N_transfem` n'avaient fait leur coming out qu'à une partie de leur famille, voire à personne pour l'une d'entre elles. A noter que l'information étaient absente du dossier pour `r sum(is.na(subj_soc_data$fam_pers))` patients transmasculins.
+Une des questions que je pose à l'anamnèse de la première consultation est de savoir si un *coming out* a été fait et, si oui, auprès de quelles personnes et avec quelles réactions. L'objectif de cette question est d'évaluer le degré de soutien social dans le processus de transition. La figure \@ref(fig:FamPlot) montre une représentation graphique du coming out familial des patient·e·s de l'échantillon. Les patient·s· transmasculin·e·s de l'échantillon avaient tous au moins fait leur coming out à leurs deux parents tandis que `r .N_transfem_conceal` patient·e·s transféminines sur `r .N_transfem` n'avaient fait leur coming out qu'à une partie de leur famille, voire à personne pour l'une d'entre elles. A noter que l'information étaient absente du dossier pour `r sum(is.na(subj_soc_data$fam_pers))` patient·e·s transmasculin·e·s.
 
 Parmi les patient·e·s ayant fait un coming out à leur famille, `r .p_reac_neg` n'ont pas eu une réaction positive de cette dernière.
 
@@ -108,7 +108,7 @@ Vu les impacts du THAG sur la fertilité mentionnés dans l'introduction, je dem
 source('scripts/manipulate_subj_chir_data.R', encoding = 'UTF-8')
 ```
 
-Toujours dans le but d'appréhender au mieux les besoins des patient·e·s, de les informer au mieux, et de les référer vers les spécialistes adéquat·e·s, je leur demandais s'iels identifient déjà à ce stade des chirurgies nécessaires pour les rapprocher de leurs points de confort.
+Toujours dans le but d'appréhender au mieux les besoins des patient·e·s, de les informer au mieux, et de les référer vers les spécialistes adéquat·e·s, je leur ai demandé s'iels identifient déjà à ce stade des chirurgies nécessaires pour les rapprocher de leurs points de confort.
 
 Pour les patientes transféminines, la chirurgie la plus souvent identifiée comme nécessaire était la vaginoplastie (`r .p_vag2` des patient·e·s), suivie par les FFS (`r .p_ffs2`). Une patiente avait mentionné l'augmentation mammaire et aucun·e n'avait considéré les chirurgies vocales. En plus des patient·e·s ayant déjà une idée précise des chirurgies qui leur semblent nécessaires, `r .N_ffs1` patient·e·s hésitaient sur la FFS et une, sur la vaginoplastie. Dans l'ensemble, en ne comptant pas les patient·e·s qui hésitaient, `r .N_chir0` patient·e·s n'envisageaient aucune chirurgie, `r .N_chir1` patient·e·s en envisageaient une et `r .N_chir2` en envisageait deux.
 
