@@ -1,4 +1,4 @@
-patient,taille,poids,poids_M3,poids_M6,poids_M9,poids_M12,systol,systol_M3,systol_M6,systol_M9,systol_M12,diastol,diastol_M3,diastol_M6,diastol_M9,diastol_M12
+patient,taille,poids,poids_T1,poids_T2,poids_T3,poids_T4,systol_T0,systol_T1,systol_T2,systol_T3,systol_T4,diastol_T0,diastol_T1,diastol_T2,diastol_T3,diastol_T4
 SP0,,,,,,,,,,,,,,,,
 J40,165,,66,66.5,,,110,120,120,,,70,90,80,,
 3TI,179,65,,64,,,110,110,,,,60,60,,,
@@ -6,7 +6,7 @@ YGF,172,95,,,,,140,130,,,,90,80,,,
 VJ6,173,74.2,,,,,120,120,120,,,80,80,70,,
 Y5V,174,65,,,65,,130,130,120,125,,90,70,70,80,
 4TD,156,49.5,57,,,,110,,110,,,70,,80,,
-FQH,175,62.6,,,,,120,,125,,,70,70,,,
+FQH,175,62.6,,,,,120,,125,,,70,,70,,
 KCK,164,55,,,,,110,,,,,80,,,,
 YKZ,165,58.4,,60,,,110,120,110,110,,70,80,70,80,
 HEP,165,57.5,57.5,59.2,,58.5,115,,120,,120,70,,80,,80

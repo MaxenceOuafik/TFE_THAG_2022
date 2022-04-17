@@ -56,30 +56,30 @@ obj_chir_data <- read_csv("./data/obj_chir_data.csv",
                                            real_meta = readr::col_factor(levels = c("0", "1", "2", "3"))))
 
 obj_date_data <- read_csv("./data/obj_date_data.csv", 
-                          col_types = cols(date_M0 = col_date(format = "%d/%m/%Y"), 
-                                           date_M3 = col_date(format = "%d/%m/%Y"), 
-                                           date_M6 = col_date(format = "%d/%m/%Y"), 
-                                           date_M9 = col_date(format = "%d/%m/%Y"), 
-                                           date_M12 = col_date(format = "%d/%m/%Y")))
+                          col_types = cols(date_T0 = col_date(format = "%d/%m/%Y"), 
+                                           date_T1 = col_date(format = "%d/%m/%Y"), 
+                                           date_T2 = col_date(format = "%d/%m/%Y"), 
+                                           date_T3 = col_date(format = "%d/%m/%Y"), 
+                                           date_T4 = col_date(format = "%d/%m/%Y")))
 
 obj_lab_data <- read_csv("./data/obj_lab_data.csv")
 
 obj_param_data <- read_csv("./data/obj_param_data.csv")
 
 obj_ttmt_data <- read_csv("./data/obj_ttmt_data.csv", 
-                          col_types = cols(andro_type_M0 = readr::col_factor(levels = c("Sustanon")),
-                                           andro_type_M3 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
-                                           andro_type_M6 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
-                                           andro_type_M9 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
-                                           andro_type_M12 = readr::col_factor(levels = c("Sustanon","Nebido")), 
-                                           oestro_type_M0 = readr::col_factor(levels = c("Oestrogel","Dermestril", "Zumenon")), 
-                                           oestro_type_M3 = readr::col_factor(levels = c("Oestrogel","Dermestril", "Zumenon")), 
-                                           oestro_type_M6 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
-                                           oestro_type_M9 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
-                                           oestro_type_M12 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
-                                           antiand_type_M0 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
-                                           antiand_type_M3 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
-                                           antiand_type_M6 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
-                                           antiand_type_M12 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard"))))
+                          col_types = cols(andro_type_T0 = readr::col_factor(levels = c("Sustanon")),
+                                           andro_type_T1 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
+                                           andro_type_T2 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
+                                           andro_type_T3 = readr::col_factor(levels = c("Sustanon", "Nebido")), 
+                                           andro_type_T4 = readr::col_factor(levels = c("Sustanon","Nebido")), 
+                                           oestro_type_T0 = readr::col_factor(levels = c("Oestrogel","Dermestril", "Zumenon")), 
+                                           oestro_type_T1 = readr::col_factor(levels = c("Oestrogel","Dermestril", "Zumenon")), 
+                                           oestro_type_T2 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
+                                           oestro_type_T3 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
+                                           oestro_type_T4 = readr::col_factor(levels = c("Oestrogel", "Dermestril", "Zumenon")), 
+                                           antiand_type_T0 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
+                                           antiand_type_T1 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
+                                           antiand_type_T2 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard")), 
+                                           antiand_type_T4 = readr::col_factor(levels = c("Aucun", "Spironolactone", "Depo-Eligard"))))
 
 outcome_data <- read_csv("./data/outcome_data.csv")
