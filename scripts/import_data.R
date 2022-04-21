@@ -56,11 +56,11 @@ obj_chir_data <- read_csv("./data/obj_chir_data.csv",
                                            real_meta = readr::col_factor(levels = c("0", "1", "2", "3"))))
 
 obj_date_data <- read_csv("./data/obj_date_data.csv", 
-                          col_types = cols(date_T0 = col_date(format = "%d/%m/%Y"), 
-                                           date_T1 = col_date(format = "%d/%m/%Y"), 
-                                           date_T2 = col_date(format = "%d/%m/%Y"), 
-                                           date_T3 = col_date(format = "%d/%m/%Y"), 
-                                           date_T4 = col_date(format = "%d/%m/%Y")))
+                          col_types = cols(date_T0 = col_date(format = "%d-%m-%Y"), 
+                                           date_T1 = col_date(format = "%d-%m-%Y"), 
+                                           date_T2 = col_date(format = "%d-%m-%Y"), 
+                                           date_T3 = col_date(format = "%d-%m-%Y"), 
+                                           date_T4 = col_date(format = "%d-%m-%Y")))
 
 obj_lab_data <- read_csv("./data/obj_lab_data.csv")
 

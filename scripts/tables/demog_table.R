@@ -1,4 +1,4 @@
-library(dplyr)
+library(tidyverse)
 requireNamespace('gtsummary')
 requireNamespace('flextable')
 requireNamespace('officer')
@@ -41,10 +41,11 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
 .demog_ft <- .demog_ft %>%
   flextable::compose(i = 2, j = 1, flextable::as_paragraph((flextable::as_chunk('Médiane')))) %>%
   flextable::compose(i = 3, j = 1, flextable::as_paragraph((flextable::as_chunk('Minimum - Maximum')))) %>%
-  flextable::set_header_labels(stat_0 = "Total, N = 25") %>%
+  flextable::set_header_labels(stat_0 = "Total, N = 26") %>%
   flextable::bold(part = "header") %>%
   flextable::bold(j = 2, part = 'body') %>%
   flextable::color(color = "white", part = "header") %>%
+  flextable::border_outer(border = .outer.border, part = "body") %>%
   flextable::border_outer(border = .outer.border, part = "header") %>%
   flextable::font(fontname = 'Lato Light', part = 'body') %>%
   flextable::font(fontname = 'Lato Bold', part = 'header')

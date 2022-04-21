@@ -1,4 +1,4 @@
-library(dplyr)
+library(tidyverse)
 requireNamespace('scales')
 
 .subj_chir_data_F <- subj_chir_data %>%

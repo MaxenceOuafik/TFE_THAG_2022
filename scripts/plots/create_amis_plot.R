@@ -1,5 +1,5 @@
-source('scripts/manipulate_soc_data.R', encoding = 'UTF-8')
-source('scripts/create_plot_theme.R')
+source('scripts/data_manipulation/manipulate_soc_data.R', encoding = 'UTF-8')
+source('scripts/plots/create_plot_theme.R')
 
 requireNamespace('plotly')
 
@@ -15,7 +15,7 @@ requireNamespace('plotly')
        fill = "Genres") +
   .TFE_theme_Word + 
   scale_fill_manual (values = .myColors) +
-  scale_y_continuous(breaks = c(0:6))
+  scale_y_continuous(breaks = c(0:7))
 
 
 ggsave("output/plots/amis_plot.png",

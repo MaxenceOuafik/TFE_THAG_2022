@@ -1,5 +1,5 @@
-source('scripts/manipulate_soc_data.R', encoding = 'UTF-8')
-source('scripts/create_plot_theme.R')
+source('scripts/data_manipulation/manipulate_soc_data.R', encoding = 'UTF-8')
+source('scripts/plots/create_plot_theme.R')
 requireNamespace('plotly')
 
 .fam_plot <- ggplot(data = .count_fam_pers, aes(x = reorder(fam_pers, -n), 

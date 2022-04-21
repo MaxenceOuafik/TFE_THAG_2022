@@ -1,33 +1,34 @@
-source('scripts/create_plot_theme.R')
+source('scripts/plots/create_plot_theme.R')
+source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 requireNamespace('plotly')
 
-.followup_time <-  .time_diff %>% 
-  left_join(obj_demog_data, by = 'patient') %>%
-  mutate(transition = as.factor(ifelse(sexe == 'M'|sexe == 'I',
-                                       'Personnes transféminines',
-                                       'Personnes transmasculines'))) %>%
+.followup_time <-  .long_outcome_data %>%
   select(patient, transition, jours_THAG, consultation) %>%
   group_by(patient, transition) %>%
   summarise(followup = max(jours_THAG),
-            max_cons = max(consultation)) 
+            max_cons = max(consultation)) %>%
+  mutate(time_classe = cut(followup,
+                           breaks = c(0, 95, 229, 297, 469),
+                           labels = c('3 mois', '6 mois', '9 mois', '12 mois')))
 
-.followup_plot <- .followup_time %>% 
-  group_by(transition) %>%
-  count(max_cons) %>%
-  mutate(N_at_cons = max(cumsum(n)) - cumsum(lag(n, default = 0))) %>%
-  ggplot(aes(x = max_cons,
-             y = N_at_cons,
+.followup <- .followup_time %>%
+  group_by(transition, time_classe) %>%
+  summarise(N = n())
+  
+.followup_plot <- .followup %>%
+  ggplot(aes(x = time_classe,
+             y = N,
              fill = transition,
-             text = paste0("Trimestre : ", max_cons, '\n',  "Nombre de participant·e·s : ", N_at_cons, '\n', 'Genre : ', transition))) + 
+             text = paste0("Durée du suivi : ", time_classe, '\n',  "Nombre de participant·e·s : ", N, '\n', 'Genre : ', transition))) + 
   geom_col(position = position_dodge2(preserve = 'single'),
            width = 0.8) + 
-  labs(title = 'Nombre de patient·e·s par consultation trimestrielle et par genre',
+  labs(title = 'Durée du suivi, par genres',
        x = 'Consultations',
        y = 'Nombre de patient·e·s',
-       fill = 'Genres') + 
+       fill = 'Durée du suivi') + 
   .TFE_theme_Word + 
   scale_fill_manual (values = .myColors)+
-  scale_y_continuous(breaks = seq(0, 15, 2))
+  scale_y_continuous(breaks = seq(0, 5, 1))
 
 ggsave("output/plots/followup_plot.png",
        plot = .followup_plot,

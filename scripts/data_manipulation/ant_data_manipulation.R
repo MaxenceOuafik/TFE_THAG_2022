@@ -1,4 +1,4 @@
-library(dplyr)
+library(tidyverse)
 requireNamespace('scales')
 
 .N_dep <- sum(obj_ant_data$elem_med_1 == "depression", na.rm = T)
