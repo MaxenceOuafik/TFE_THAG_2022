@@ -6,7 +6,7 @@ requireNamespace('flextable')
   mutate(androgène = replace_na(androgène, 'Avant traitement')) %>%
   left_join(select(.long_lab_data, patient, consultation, GR:tg), by = c('patient', 'consultation')) %>%
   left_join(select(.long_param, patient, consultation, systol, diastol), by = c('patient', 'consultation')) %>%
-  select(consultation, systol, diastol, FSH:T, Hb, creat, TGO, TGP, LDL, HDL,tg) %>%
+  select(consultation, systol, diastol, FSH:T, Hb, Hct, creat, TGO, TGP, LDL, HDL,tg) %>%
   gtsummary::tbl_summary(by = consultation, type = list(FSH ~ 'continuous',
                                                          LH ~ 'continuous',
                                                          O2 ~ 'continuous',
@@ -14,6 +14,7 @@ requireNamespace('flextable')
                                                          systol ~ 'continuous',
                                                          diastol ~ 'continuous',
                                                          Hb ~ 'continuous',
+                                                         Hct ~ 'continuous',
                                                          creat ~ 'continuous',
                                                          TGO ~ 'continuous',
                                                          TGP ~ 'continuous',
@@ -23,7 +24,7 @@ requireNamespace('flextable')
                                                                     missing = 'no',
                                                                     statistic = c(FSH, LH, O2, T, 
                                                                                   systol, diastol, 
-                                                                                  Hb, creat, TGO, TGP, LDL, HDL, tg) ~ "{median}",
+                                                                                  Hb, Hct, creat, TGO, TGP, LDL, HDL, tg) ~ "{median}",
                                                                     digits = list(LDL ~ 1,
                                                                                   creat ~ 2,
                                                                                   T ~ 1,
@@ -44,6 +45,7 @@ requireNamespace('flextable')
                                                                                  tg ~ 'Triglycérides (mg/dL)',
                                                                                  diastol ~ 'Diastolique (mmHg)',
                                                                                  Hb ~ 'Hémoglobine (g/dL)',
+                                                                                 Hct ~ 'Hématocrite (%)',
                                                                                  creat ~ 'Créatinine (mg/dL)')) %>%
   gtsummary::modify_header(label = '**Paramètres**') %>%
   gtsummary::bold_labels() %>%
@@ -63,7 +65,7 @@ requireNamespace('flextable')
   flextable::border_outer(border = .outer.border, part = "body") %>%
   flextable::border_outer(border = .outer.border, part = "header") %>%
   flextable::border_inner_h(border = .header.border, part = "header") %>%
-  flextable::hline(i = c(2,7,8,10,12), border = .inner.border_h, part = "body") %>%
+  flextable::hline(i = c(2,6,8,10,12), border = .inner.border_h, part = "body") %>%
   flextable::font(fontname = 'Lato Light', part = 'body') %>%
   flextable::font(fontname = 'Lato Bold', part = 'header')
 

@@ -65,6 +65,23 @@ ggsave("output/plots/sankey_plot.png",
                  legend = list(orientation = 'h', y = 110)) %>%
   plotly::config(displayModeBar = FALSE)
 
+#### Chiffres à insérer dans le texte
+.p_noaa_T0 <- scales::percent((obj_ttmt_data %>% filter(antiand_type_T0 == 'Aucun') %>% count() %>% pull)/
+                                sum(!is.na(obj_ttmt_data$antiand_type_T0)))
 
   
+.N_spiro_T0 <- obj_ttmt_data %>% filter(antiand_type_T0 == 'Spironolactone') %>% count() %>% pull
 
+.poso_oestro <- obj_ttmt_data %>%
+  select(1, seq(13,19, 2)) %>%
+  rename(oestro_pos_T1 = oestro_pos_T0,
+         oestro_pos_T2 = oestro_pos_T1,
+         oestro_pos_T3 = oestro_pos_T2,
+         oestro_pos_T4 = oestro_pos_T3) %>%
+  pivot_longer(cols = !patient,
+               names_sep = '_',
+               names_to = c('type', 'variable', 'consultation'),
+               values_to = 'posologie',
+               values_drop_na = TRUE) %>%
+  select(patient, consultation, posologie) %>%
+  left_join(.long_oestro_data, by = c('patient', 'consultation'))

@@ -79,9 +79,10 @@ requireNamespace('flextable')
                                     style = 'Légende1')
 
 .outcome_F_ft_word <- .outcome_F_ft %>%
-  flextable::fontsize(j=1:11, size=10, part ='body') %>%
-  flextable::fontsize(i = 1, j=1:11, size = 10, part = 'header')%>%
+  flextable::fontsize(j=1:11, size=9, part ='body') %>%
+  flextable::fontsize(i = 1, j=1:11, size = 13, part = 'header')%>%
+  flextable::fontsize(i = 2, j=2:11, size = 8, part = 'header') %>%
   flextable::fontsize(i = 1, j=1, size = 10, part = 'footer')
 
-.outcome_F_ft_word <- flextable::width(.outcome_F_ft_word, j= 1, width = 5, unit = "cm")
+.outcome_F_ft_word <- flextable::width(.outcome_F_ft_word, j= 1, width = 4, unit = "cm")
 .outcome_F_ft_word <- flextable::width(.outcome_F_ft_word, j= 2:11, width = 2.5, unit = "cm")

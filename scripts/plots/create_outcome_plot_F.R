@@ -6,7 +6,7 @@ source('scripts/plots/create_plot_theme.R')
            !is.na(antiandrogène)) %>%
   mutate(T_2.29 = ifelse(T < 2.29, '#82ccdd', '#f8c291'),
          O2_classe = cut(O2, breaks = c(30, 100, 200, 400),
-                         labels = c("< 100", "100-200", "> 300")),
+                         labels = c("< 100", "100-200", '>200')),
          LH_classe = cut(LH, breaks = c(0, 1, 4, 7),
                          labels = c("< 1", "1-4", '>4')))
 
@@ -22,7 +22,7 @@ source('scripts/plots/create_plot_theme.R')
               col = '#38ada9') +
   geom_hline(yintercept=2.29, linetype = 'dashed', col = '#82ccdd', alpha = 0.5, size = 1) + 
   facet_grid(. ~ antiandrogène) +
-  labs(title = 'Évolution de la testostéronémie au fil des consultations, par anti-androgène',
+  labs(
        x = 'Consultations',
        y = 'Testostérone sérique (nmol/L)',
        color = 'Testostérone (nmol/L)') +
@@ -34,7 +34,6 @@ source('scripts/plots/create_plot_theme.R')
   theme(axis.title = element_text(family = 'Lato Light',
                                   size = 10,
                                   color = '#60a3bc'),
-        plot.title = element_blank(),
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato'),
         legend.position = 'bottom',
@@ -56,7 +55,7 @@ source('scripts/plots/create_plot_theme.R')
   geom_hline(yintercept=2.29, linetype = 'dashed', col = '#82ccdd', alpha = 0.5, size = 1) + 
   geom_vline(xintercept=c(100,200), col = '#82ccdd', alpha = 0.5, size = 1) + 
   facet_grid(. ~ antiandrogène) +
-  labs(title = "Évolution de la testostéronémie en fonction de l'oestradiolémie",
+  labs(
        x = 'Estradiol sérique (ng/L)',
        y = 'Testostérone sérique (nmol/L)',
        color = 'Testostérone (nmol/L)') +
@@ -68,7 +67,6 @@ source('scripts/plots/create_plot_theme.R')
   theme(axis.title = element_text(family = 'Lato Light',
                                   size = 10,
                                   color = '#60a3bc'),
-        plot.title = element_blank(),
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato'),
         legend.position = 'bottom',
@@ -89,7 +87,7 @@ source('scripts/plots/create_plot_theme.R')
               col = '#38ada9') +
   geom_hline(yintercept=2.29, linetype = 'dashed', col = '#82ccdd', alpha = 0.5, size = 1) + 
   facet_grid(. ~ antiandrogène) +
-  labs(title = "Évolution de la testostéronémie en fonction de la concentration de LH, par antiandrogène",
+  labs(
        x = 'LH (U/L)',
        y = 'Testostérone sérique (nmol/L)',
        color = 'Testostérone (nmol/L)') +
@@ -101,7 +99,6 @@ source('scripts/plots/create_plot_theme.R')
   theme(axis.title = element_text(family = 'Lato Light',
                                   size = 10,
                                   color = '#60a3bc'),
-        plot.title = element_blank(),
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato'),
         legend.position = 'bottom',
@@ -122,7 +119,7 @@ source('scripts/plots/create_plot_theme.R')
               aes(group = 1),
               col = '#38ada9') +
   facet_grid(. ~ antiandrogène) +
-  labs(title = "Évolution de la concentration de LH en fonction de l'oestradiolémie, par anti-androgène",
+  labs(
        x = 'Estradiol (ng/L)',
        y = 'LH (U/L)',
        color = 'Testostérone (nmol/L)') +
@@ -134,7 +131,6 @@ source('scripts/plots/create_plot_theme.R')
   theme(axis.title = element_text(family = 'Lato Light',
                                   size = 10,
                                   color = '#60a3bc'),
-        plot.title = element_blank(),
         plot.background = element_rect(fill = 'white'),
         text = element_text(family = 'Lato'),
         legend.position = 'bottom',
@@ -187,7 +183,7 @@ ggsave("output/plots/outcome_plot_F.png",
        scale = 1.4)
 
 .T_time_F_HTML <- .T_time_F +
-  labs(title = NULL)+ 
+  labs(title = 'A')+ 
   theme(legend.position='none')
 
 .anim_T_time_F <- plotly::ggplotly(.T_time_F_HTML, tooltip = 'text') %>%
@@ -200,8 +196,9 @@ ggsave("output/plots/outcome_plot_F.png",
   plotly::config(displayModeBar = FALSE)
 
 .T_O2_F_HTML <- .T_O2_F +
-  labs(title = NULL)+ 
-  theme(legend.position='none')
+  labs(title = 'B')+ 
+  theme(legend.position='none',
+        axis.text.x = element_text(angle = 90))
 
 .anim_T_O2_F <- plotly::ggplotly(.T_O2_F_HTML, tooltip = 'text') %>%
   plotly::style(hoverlabel = .label) %>%
@@ -213,7 +210,7 @@ ggsave("output/plots/outcome_plot_F.png",
   plotly::config(displayModeBar = FALSE)
 
 .T_LH_F_HTML <- .T_LH_F +
-  labs(title = NULL)+ 
+  labs(title = 'C')+ 
   theme(legend.position='none')
 
 .anim_T_LH_F <- plotly::ggplotly(.T_LH_F_HTML, tooltip = 'text') %>%
@@ -226,8 +223,9 @@ ggsave("output/plots/outcome_plot_F.png",
   plotly::config(displayModeBar = FALSE)
 
 .O2_LH_F_HTML <- .O2_LH_F +
-  labs(title = NULL)+ 
-  theme(legend.position='none')
+  labs(title = 'D')+ 
+  theme(legend.position='none',
+        axis.text.x = element_text(angle = 90))
 
 .anim_O2_LH_F <- plotly::ggplotly(.O2_LH_F_HTML, tooltip = 'text') %>%
   plotly::style(hoverlabel = .label) %>%
