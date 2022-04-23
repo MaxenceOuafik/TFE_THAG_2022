@@ -1,5 +1,0 @@
-fig:flowchart
-tab:DemogTab
-fig:FollowPlot
-fig:FamPlot
-fig:AmisPlot
