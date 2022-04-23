@@ -30,7 +30,7 @@ Les données collectées correspondent aux thématiques abordées lors de l'anam
 
 ### Effets les plus attendus
 
-Variables binaires codée (1) si l'effet a été mentionné explicitement comme une priorité pour le point de confort du/de la patient(e) et (0) dans le cas contraire. Chaque variable correspond à un des effets principaux du THAG soit :
+Variables binaires codées (1) si l'effet a été mentionné explicitement comme une priorité pour le point de confort du/de la patient(e) et (0) dans le cas contraire. Chaque variable correspond à un des effets principaux du THAG soit :
 
 -   Pour les femmes transgenres et autres personnes transféminines, le développement de la poitrine, l'adoucissement de la peau, la diminution de la pilosité, la répartition plus féminine des graisses, la diminution de la musculature, la disparitions des érections spontanées et un arrêt de l'alopécie.
 
@@ -42,7 +42,7 @@ Variables binaires codées (1) si cet effet inquiète le patient ou (0) dans le 
 
 ### Cryopréservation des gamètes
 
-Variable correspondant à la réalisation d'une cryopréservation des gamètes avant l'introduction du THAG : non-réalisée (0) démarches effectuées (1)
+Variable correspondant à la réalisation d'une cryopréservation des gamètes avant l'introduction du THAG : non réalisée (0) démarches effectuées (1)
 
 ## Aspects chirurgicaux {#aspects-chirurgicaux}
 

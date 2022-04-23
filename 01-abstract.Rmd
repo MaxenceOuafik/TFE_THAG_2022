@@ -4,7 +4,19 @@
 
 ```{r, eval = !knitr::is_html_output(), echo= F}
 cat("Table des matières")
-block_toc(level = 2)
+block_toc(level = 3)
+```
+
+\newpage
+
+```{r, eval = !knitr::is_html_output(), echo= F}
+cat("Liste des tables")
+block_toc(seq_id = "tab")
+```
+
+```{r, eval = !knitr::is_html_output(), echo= F}
+cat("Liste des figures")
+block_toc(seq_id = "fig")
 ```
 
 \newpage

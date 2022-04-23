@@ -90,6 +90,7 @@ library(tidyverse)
                values_to = 'oestrogène',
                values_drop_na = TRUE) %>%
   select(patient, consultation, oestrogène)
+.long_oestro_data$oestrogène <- as.character(.long_oestro_data$oestrogène)
 
 # Version longue des données sur le traitement par antiandrogènes 
 

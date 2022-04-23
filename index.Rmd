@@ -20,6 +20,13 @@ library(extrafont)
 loadfonts(device = 'all')
 ```
 
+```{r echo=FALSE}
+block_pour_docx("files/cover-page.docx")
+
+```
+
+\newpage
+
 # (PART) Avant-propos {.unnumbered}
 
 # Remerciements {#remerciements .unnumbered}

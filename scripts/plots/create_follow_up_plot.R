@@ -25,7 +25,7 @@ requireNamespace('plotly')
   labs(title = 'Durée du suivi, par genres',
        x = 'Consultations',
        y = 'Nombre de patient·e·s',
-       fill = 'Durée du suivi') + 
+       fill = 'Genres') + 
   .TFE_theme_Word + 
   scale_fill_manual (values = .myColors)+
   scale_y_continuous(breaks = seq(0, 5, 1))
