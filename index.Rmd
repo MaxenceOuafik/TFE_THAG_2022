@@ -29,6 +29,20 @@ block_pour_docx("files/cover-page.docx")
 
 # (PART) Avant-propos {.unnumbered}
 
+Une question qui me revient souvent, parfois même de la part de mes patient·e·s, est de savoir pourquoi j'ai choisi de m'intéresser à la santé des personnes transgenres. Je souhaitais donc profiter de ce préambule pour y répondre.
+
+J'ai commencé à m'investir dans l'associatif LGBTQIA+ en 2012, en faisant la connaissance du CHEN, le Cercle LGBTQIA+ des Étudiant·e·s de Namur. Au fil des mois et des années, mon implication n'a fait que croître et je me suis retrouvé dans les conseils d'administration du CHEN ainsi que des CHEFF, la fédération de cercles dont le CHEN faisait partie. L'objectif de ces associations était de favoriser la socialisation des jeunes LGBTQIA+. Mon rôle en leur sein tournait majoritairement autour de l'accueil et des thématiques liées à la santé. J'ai donc eu l'occasion de rencontrer, d'accueillir, d'écouter et de soutenir un grand nombre de jeunes, de tous genres, et de toutes orientations sexuelles. À travers leurs histoires, j'ai pu réaliser l'ampleur des difficultés auxquelles les personnes transgenres étaient confrontées dans le domaine de la santé. La situation était telle que deux de mes connaissances préféraient attendre que je sois diplômé pour commencer leur traitement hormonal avec moi. En 2019, fraîchement assistant, j'ai donc commencé à éplucher toute la littérature scientifique sur le traitement hormonal d'affirmation de genre afin d'être en mesure de répondre à leurs attentes. Suite au COVID, je n'ai pu entamer leur suivi qu'en juin 2020. Aujourd'hui, moins de deux ans plus tard, je suis une septantaine de patient·e·s transgenres et j'ai initié une trentaine de traitements hormonaux.
+
+L'approche de ce TFE se veut donc résolument trans-affirmative, c'est-à-dire construite sur une vision non-binaire et non pathologisante des transidentités, et mettant au premier plan l'autodétermination ainsi que l'expertise des personnes transgenres. Pour cette raison, le langage inclusif sera employé dans la totalité du texte. En effet, genrer incorrectement une partie de ma patientèle en utilisant les accords classiques représentait à mes yeux une violence symbolique que je ne souhaitais pas reproduire dans ce texte.
+
 # Remerciements {#remerciements .unnumbered}
+
+Avant toute chose, je souhaitais remercier mes patient·e·s pour leur confiance vis-à-vis de du traitement hormonal. À plus forte raison, merci à celles et ceux qui ont accepté que leurs données soient utilisées pour ce TFE ainsi que pour l'enthousiasme dont vous avez fait preuve vis-à-vis de ce travail. Merci tout particulièrement à A. et A., mes deux premier·e·s patient·e·s, sans lesquel·le·s rien de tout ça n'aurait sans doute eu lieu.
+
+Je remercie également le Dr Pierre Guérin, mon premier maître de stage, pour avoir accepté que je débute ces traitements sous sa supervision, et d'avoir eu foi en mes capacités de mener un suivi de qualité malgré mon inexpérience.
+
+Merci à tous les partenaires associatifs avec lesquels j'ai eu le plaisir de travailler depuis près de dix ans et qui ont contribué à former le praticien que je suis dans la même mesure que l'Université. Merci plus particulièrement au CHEN, aux CHEFF, à IdenTIQ, à Ex-Æquo, à Arc-en-Ciel Wallonie, à Genres Pluriels, à Face à Toi Même, ainsi qu'à TransKids Belgique.
+
+Merci enfin à Aurore Dufrasne, de Genres Pluriels, pour sa relecture attentive dans des temps limités.
 
 \newpage
