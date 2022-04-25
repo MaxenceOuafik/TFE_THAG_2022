@@ -21,7 +21,8 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 .chir_data_F <- mutate(.subj_chir_data_F, N_chir = ifelse(.subj_chir_data_F$bes_mam == 2, 1, 0) +
                          ifelse(.subj_chir_data_F$bes_vag == 2, 1, 0)+
                          ifelse(.subj_chir_data_F$bes_ffs == 2, 1, 0)+ 
-                         ifelse(.subj_chir_data_F$bes_voix == 2, 1, 0))
+                         ifelse(.subj_chir_data_F$bes_voix == 2, 1, 0)) %>%
+  filter(!is.na(N_chir))
   
 
 .subj_chir_data_M <- subj_chir_data %>%
@@ -31,7 +32,8 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 .chir_data_M <- mutate(.subj_chir_data_M, N_chir = ifelse(.subj_chir_data_M$bes_torso == 2, 1, 0) +
                                 ifelse(.subj_chir_data_M$bes_hystero == 2, 1, 0)+
                                 ifelse(.subj_chir_data_M$bes_phallo == 2, 1, 0)+ 
-                                ifelse(.subj_chir_data_M$bes_meta == 2, 1, 0))
+                                ifelse(.subj_chir_data_M$bes_meta == 2, 1, 0)) %>%
+  filter(!is.na(N_chir))
 
 .N_mam <- sum(.chir_data_F$bes_mam == '2', na.rm = T)
 .p_vag2 <- scales::percent(sum(.chir_data_F$bes_vag == '2', na.rm = T)/nrow(.chir_data_F))
@@ -81,7 +83,11 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 # Traitement
 
 .poso_oestro <- obj_ttmt_data %>%
-  select(1, seq(13,21, 2)) %>%
+  select(1, seq(13,19, 2)) %>%
+  rename(oestro_pos_T1 = oestro_pos_T0,
+         oestro_pos_T2 = oestro_pos_T1,
+         oestro_pos_T3 = oestro_pos_T2,
+         oestro_pos_T4 = oestro_pos_T3) %>%
   pivot_longer(cols = !patient,
                names_sep = '_',
                names_to = c('type', 'variable', 'consultation'),
@@ -101,7 +107,7 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
   pull()
 
 .poso_pill <- .poso_oestro %>%
-  filter(oestrogène == 'Oestrogel')%>%
+  filter(oestrogène == 'Zumenon')%>%
   select(posologie) %>%
   pull()
 

@@ -23,7 +23,7 @@ requireNamespace('plotly')
   geom_col(position = position_dodge2(preserve = 'single'),
            width = 0.8) + 
   labs(title = 'Durée du suivi, par genres',
-       x = 'Consultations',
+       x = 'Durée du suivi',
        y = 'Nombre de patient·e·s',
        fill = 'Genres') + 
   .TFE_theme_Word + 
