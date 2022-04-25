@@ -2,4 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
-data/*
+data/obj_ant_data.csv
+data/obj_chir_data.csv
+data/obj_date_data.csv
+data/obj_demog_data.csv
+data/obj_lab_data.csv
+data/obj_param_data.csv
+data/obj_ttmt_data.csv
+data/outcome_data.csv
+data/subj_chir_data.csv
+data/subj_horm_data.csv
+data/subj_soc_data.csv
