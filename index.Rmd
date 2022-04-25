@@ -35,6 +35,8 @@ J'ai commencé à m'investir dans l'associatif LGBTQIA+ en 2012, en faisant la c
 
 L'approche de ce TFE se veut donc résolument trans-affirmative, c'est-à-dire construite sur une vision non-binaire et non pathologisante des transidentités, et mettant au premier plan l'autodétermination ainsi que l'expertise des personnes transgenres. Pour cette raison, le langage inclusif sera employé dans la totalité du texte. En effet, genrer incorrectement une partie de ma patientèle en utilisant les accords classiques représentait à mes yeux une violence symbolique que je ne souhaitais pas reproduire dans ce texte.
 
+\newpage
+
 # Remerciements {#remerciements .unnumbered}
 
 Avant toute chose, je souhaitais remercier mes patient·e·s pour leur confiance vis-à-vis de du traitement hormonal. À plus forte raison, merci à celles et ceux qui ont accepté que leurs données soient utilisées pour ce TFE ainsi que pour l'enthousiasme dont vous avez fait preuve vis-à-vis de ce travail. Merci tout particulièrement à A. et A., mes deux premier·e·s patient·e·s, sans lesquel·le·s rien de tout ça n'aurait sans doute eu lieu.

@@ -1,3 +1,9 @@
+---
+bibliography: references.bib
+---
+
 # Discussion
+
+Court paragraphe résumant les résultats puis on enchaîne.
 
 \newpage

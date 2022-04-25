@@ -1,6 +1,6 @@
 # (PART) Annexes
 
-# Guide de codage des données subjectives {#guide-de-codage-des-données-subjectives}
+# Guide de codage des données qualitatives {#guide-de-codage-des-données-subjectives}
 
 Afin d'extraire les données subjectives des notes médicales, un guide d'extraction et de codages des variables a été développé au préalable. Ce guide a ensuite été testé et affiné jusqu'à sa version définitive ayant permis la réalisation de ce TFE.
 

@@ -13,7 +13,12 @@ requireNamespace('scales')
 
 Parmi les 71 patient·e·s que j'ai déjà vu·e·s au moins une fois en consultation dans le but d'initier ou de suivre un THAG, 24 avaient déjà un traitement en place, instauré par une autre personne que moi. À noter que 3 patient·e·s avaient commencé leur traitement sans supervision médicale. En outre, 10 patient·e·s n'avaient pas encore entamé leur THAG au moment où s'est achevée l'étape de sélection des participant·e·s. Enfin, 10 patient·e·s avaient entamé un THAG depuis moins de trois mois et n'avaient donc pas encore bénéficié d'une consultation à T1. 26 des 27 patient·e·s éligibles ont répondu positivement pour que leurs données soient utilisées dans le cadre de ce TFE. La figure \@ref(fig:flowchart) donne une représentation graphique de ce processus de sélection.
 
-```{r flowchart, fig.align='center', fig.cap= 'Diagramme de flux présentant la sélection des patient·e·s pour le TFE', echo=FALSE, out.width = '800px'}
+```{r flowchart_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "flowchart", fig.cap= 'Diagramme de flux présentant la sélection des patient·e·s pour le TFE', fig.width=5.9, fig.height=5.3, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('files/sample_flowchart.png')
+```
+
+```{r flowchart, fig.align='center', fig.cap= 'Diagramme de flux présentant la sélection des patient·e·s pour le TFE', echo=FALSE, out.width = '80%', eval = knitr::is_html_output()}
 
 knitr::include_graphics('files/sample_flowchart.png', dpi = 300)
 ```

@@ -1,5 +1,7 @@
+source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 # Démographie 
-
+.ant_genre <- obj_ant_data %>%
+  left_join(obj_demog_data, by = 'patient')
 .N_TSA_F <- sum(.ant_genre$elem_med_1 == 'TSA'& .ant_genre$genre == 'F', 
                 na.rm = T) + 
   sum(.ant_genre$elem_med_2 == 'TSA'& .ant_genre$genre == 'F', 
@@ -12,6 +14,25 @@
 .N_alc <- sum(obj_ant_data$elem_med_2 == "mesusage d'alcool", na.rm = T)
 
 # Chirurgie 
+.subj_chir_data_F <- subj_chir_data %>%
+  left_join(obj_demog_data, by = 'patient') %>%
+  filter(genre == 'F') 
+
+.chir_data_F <- mutate(.subj_chir_data_F, N_chir = ifelse(.subj_chir_data_F$bes_mam == 2, 1, 0) +
+                         ifelse(.subj_chir_data_F$bes_vag == 2, 1, 0)+
+                         ifelse(.subj_chir_data_F$bes_ffs == 2, 1, 0)+ 
+                         ifelse(.subj_chir_data_F$bes_voix == 2, 1, 0))
+  
+
+.subj_chir_data_M <- subj_chir_data %>%
+  left_join(obj_demog_data, by = 'patient') %>%
+  filter(genre == 'M')
+
+.chir_data_M <- mutate(.subj_chir_data_M, N_chir = ifelse(.subj_chir_data_M$bes_torso == 2, 1, 0) +
+                                ifelse(.subj_chir_data_M$bes_hystero == 2, 1, 0)+
+                                ifelse(.subj_chir_data_M$bes_phallo == 2, 1, 0)+ 
+                                ifelse(.subj_chir_data_M$bes_meta == 2, 1, 0))
+
 .N_mam <- sum(.chir_data_F$bes_mam == '2', na.rm = T)
 .p_vag2 <- scales::percent(sum(.chir_data_F$bes_vag == '2', na.rm = T)/nrow(.chir_data_F))
 .p_vag1 <- scales::percent(sum(.chir_data_F$bes_vag == '1', na.rm = T)/nrow(.chir_data_F))
@@ -58,6 +79,17 @@
                                     .N_tot_attentes_M)
 
 # Traitement
+
+.poso_oestro <- obj_ttmt_data %>%
+  select(1, seq(13,21, 2)) %>%
+  pivot_longer(cols = !patient,
+               names_sep = '_',
+               names_to = c('type', 'variable', 'consultation'),
+               values_to = 'posologie',
+               values_drop_na = TRUE) %>%
+  left_join(.long_oestro_data, by = c('patient', 'consultation'))
+
+
 .poso_gel <- .poso_oestro %>%
   filter(oestrogène == 'Oestrogel') %>%
   select(posologie) %>%

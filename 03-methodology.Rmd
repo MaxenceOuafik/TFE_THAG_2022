@@ -1,7 +1,57 @@
 ---
-bibliography: references.json
+bibliography: references.bib
 ---
 
 # Méthodologie
+
+## Design
+
+Ce TFE consiste en une étude de cohorte rétrospective avec une analyse mixte par conversion. En effet, en plus des données quantitatives pures, j'ai choisi d'inclure des données qualitatives issues de l'anamnèse. N'ayant pas réalisé d'interview, et n'ayant donc pas accès à des verbatims exacts permettant une analyse poussée, j'ai opté pour une conversion des données qualitatives en données quantitatives en utilisant une analyse de contenu quantitative [@pluye2019]. En pratique, le dossier médical informatisé étant structuré sous la forme SOAP, j'ai extrait les données subjectives des premières consultations, selon un guide de codage des données disponible [dans les annexes](#guide-de-codage-des-données-subjectives). L'objectif, en incluant des données qualitatives, était double. D'une part, elles permettent d'étendre la portée du TFE pour interroger d'autres aspects, tels que le coming out, le soutien familial, la cryopréservation des gamètes, ainsi que les attentes vis-à-vis de la THAG ou de la chirurgie. D'autre part, elles apportent une plus-value pour les médecins généralistes qui liront ce travail en apportant un éclairage sur la pluralité des attentes et des parcours de transition.
+
+La recherche de littérature ayant servi à la rédaction de l'introduction et des fiches pratiques a été réalisée dans le cadre de ma pratique clinique ou des formations que je donne. Elle ne figure donc pas dans la méthodologie de ce travail, ayant été réalisée préalablement à la conduite de ce dernier.
+
+## Sélection des participant·e·s
+
+Les critères d'inclusion étaient les suivants :
+
+1.  Le THAG devait être initié par mes soins. En effet, d'une part, j'ai constaté que les médecins généralistes étaient moins à l'aise avec l'initiation d'un THAG qu'avec d'autres aspects, tels que l'analyse d'une prise de sang ou la represcription. Il m'a donc semblé plus exemplatif de montrer avant tout cet aspect de ma pratique. Par ailleurs, cela permettait également d'homogénéiser l'échantillon et de limiter ainsi les facteurs confondants relatifs à la durée des traitements ou au type des molécules employées, si le traitement pris par les patient·e·s différait de ce que j'utilise habituellement.
+
+2.  Le THAG devait être instauré depuis au moins trois mois, avec au moins une prise de sang de contrôle, afin d'avoir des valeurs à comparer. J'ai choisi ce cutoff de trois mois, car l'échantillon aurait été trop restreint si j'avais opté pour un temps de suivi plus long.
+
+Ces patient·e·s m'ont principalement été adressé·e·s via des collaborations avec des associations de terrain, principalement la Maison Arc-en-Ciel de Liège, Face à Toi Même ASBL et le Réseau Psycho-Médico-Social (PMS) trans\*/inter\* belge de Genres Pluriels, dont je fais partie. En outre, le bouche à oreilles entre les patient·e·s en a également amené d'autres à ma consultation.
+
+## Variables extraites
+
+Les variables démographiques extraites concernaient l'âge, la province de résidence, la nationalité, le sexe assigné à la naissance, le genre, le statut à la mutuelle, et s'il y avait eu un changement de prénom et/ou de marqueur de genre à l'état-civil. Les antécédents médicaux et éléments de soin actif ont également été extraits. Pour le suivi hormonal à proprement parler, j'ai d'abord extrait les dates de chaque consultation, et les valeurs de laboratoire pertinentes à chaque consultation (nombre de globules rouges, hémoglobine, hématocrite, créatinine, kaliémie, prolactine, transaminases hépatiques, LDL-cholestérol (LDL-C), HDL-C, et triglycérides). Lorsqu'elles étaient disponibles, j'ai également récupéré les valeurs tensionnelles des différentes consultations. Enfin, j'ai extrait du dossier le type de traitement employé, la posologie, les changements éventuels, ainsi que leur raison. De plus, j'ai créé une variable représentant le coût annuel du traitement si le dernier traitement en date était maintenu sur une période d'un an.
+
+La liste complète des variables subjectives extraites ainsi que la logique de codage se situe dans le guide de codage susmentionné. Ces variables concernaient les besoins ressentis en chirurgie d'affirmation de genre, les priorités et les craintes vis-à-vis du THAG, ainsi que les personnes du cercle familial et amical auxquelles les participant·e·s avaient fait leur coming out et leur réaction.
+
+Dans les résultats, la première consultation est  abrégée T0 et chaque consultation suivante est abrégée de T1 à T4 selon le trimestre en question.
+
+## Outcomes
+
+L'outcome le plus pertinent aurait été de mesurer la satisfaction des patient·e·s, ou de chiffrer selon des échelles validées leurs changements corporels. Cependant, s'agissant d'une étude rétrospective, et ce genre de mesures sortant d'une pratique clinique classique, en plus d'être potentiellement invasive, les valeurs de laboratoire de l'axe HHG ont servi d'outcome. Ces valeurs étaient celles de la FSH, de la LH, de l'E2~s~, et de la T~s~.
+
+## Analyses statistiques
+
+Les données des patient·e·s ayant entamé un THAG féminisant ont été regroupées en fonction du type de traitement. De ce fait, l'échantillon par catégorie était trop faible que pour qu'une analyse statistique s'avère informative. Pour les patient·e·s ayant commencé un THAG masculinisant, un test des rangs signés de Wilcoxon a été choisi pour comparer les valeurs avant le THAG à celle lors de la première consultation de suivi. Ce test a été sélectionné au vu du caractère non normalement distribué des valeurs pour des échantillons appariés.
+
+## Validation des résultats
+
+Les résultats présentés dans ce TFE étant descriptifs plutôt que cherchant à tester une hypothèse, la seule validation apportée a été une comparaison avec la littérature scientifique. L'objectif de cette comparaison était de voir si les résultats obtenus dans ce travail étaient cohérents avec ce qui a déjà été mis en évidence dans des études publiées. En outre, cela a permis une confrontation des guidelines employées et la pratique clinique.
+
+## Éthique
+
+S'agissant d'une étude rétrospective menée sur des dossiers médicaux que je gère dans le cadre d'une pratique clinique habituelle et considérant qu'aucun examen supplémentaire, ni interview n'a été réalisée pour récolter les données, le présent TFE n'était pas redevable d'un avis devant le comité d'éthique de la faculté de médecine. En effet, le travail ne répondait à aucun des critères publiés par le comité d'éthique vis-à-vis des TFE sur lesquels ils devaient donner leur accord avant la collecte des données. Le département de médecine générale de l'Université de Liège a été contacté en vue de confirmer que ce TFE ne correspondait pas aux critères nécessitant une évaluation préalable par le comité d'éthique. Les patient·e·s éligibles ont toutefois été contacté·e·s par écrit en vue de leur expliquer les tenants et aboutissants de ce TFE et de leur demander l'autorisation d'utiliser leurs données dans le cadre de son élaboration, en spécifiant qu'un refus n'entraînerait aucune conséquence négative sur notre relation thérapeutique ni sur la poursuite du suivi. Il leur a de plus été rappelé qu'iels pouvaient retirer leur consentement à n'importe quel moment, et ce sans conséquence. Les données des patient·e·s n'ont été extraites qu'en cas de réponse écrite positive de leur part.
+
+En outre, considérant que le seul risque encouru par le patient résidait dans une fuite des données, un identifiant de 3 caractères générés aléatoirement a été attribué à chaque patient·e lors de l'extraction des données afin de garantir leur anonymat. Le document de codage permettant de faire le lien entre l'identité des patient·e·s et leur identifiant n'est connu que de ma personne et se situe dans un dossier sécurisé par mot de passe sécurisé.
+
+## Dissémination des résultats
+
+Ayant à cœur les notions de recherche reproductible, ce travail a été réalisé via le logiciel RStudio, et tous les scripts ayant permis l'élaboration des résultats ont été publiés dans un répertoire en ligne sur GitHub afin d'assurer la transparence du travail.
+
+La plupart des patient·e·s s'étant montré·e·s enthousiastes à l'idée de recevoir une copie du TFE, celui-ci leur sera également communiqué.
+
+Enfin, une version HTML du TFE a été compilée à partir de RStudio et [mise en ligne](https://asrahal.github.io/TFE_THAG_2022/) afin de favoriser sa lecture et sa diffusion. Cela permettra à toute personne désirant le lire ou se servir des guides pratiques de le faire depuis leur smartphone ou leur ordinateur.
 
 \newpage
