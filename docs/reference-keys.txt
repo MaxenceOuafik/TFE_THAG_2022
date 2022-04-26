@@ -9,3 +9,5 @@ fig:OutcomePlotF
 tab:OutcomeTableF
 fig:OutcomePlotM
 tab:OutcomeTableM
+fig:EffetsTHAGM
+fig:EffetsTHAGF
