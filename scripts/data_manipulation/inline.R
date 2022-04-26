@@ -80,6 +80,15 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
 .p_prio_pilo_M <- scales::percent((sum(subj_horm_data$prio_pilo_M == '1', na.rm = T))/
                                     .N_tot_attentes_M)
 
+.N_voix_seul <- subj_horm_data %>%
+  filter(prio_voix == 1 &
+           prio_dickclit == 0 &
+           prio_ameno == 0 &
+           prio_pilo_M == 0 & 
+           prio_gras_M == 0 &
+           prio_musc_M == 0) %>%
+  nrow()
+
 # Traitement
 
 .poso_oestro <- obj_ttmt_data %>%

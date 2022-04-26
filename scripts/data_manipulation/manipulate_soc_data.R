@@ -42,6 +42,20 @@ levels(.count_fam_reac$fam_reac) <- c("Réaction négative",
                                                .count_fam_pers$transition=='Personnes transféminines'])
 
 .p_reac_diff <- scales::percent(sum(.count_fam_reac$n[.count_fam_reac$fam_reac != 'Réaction positive'])/
+                                  sum(.count_fam_reac$n))
+
+.N_transmasc_neg <- sum(.count_fam_reac$n[.count_fam_reac$transition=='Personne transmasculine' &
+                                            .count_fam_reac$fam_reac != 'Réaction positive'])
+
+.p_reac_neg <- scales::percent(sum(.count_fam_reac$n[.count_fam_reac$fam_reac == 'Réaction négative'])/
+                                 sum(.count_fam_reac$n))
+
+.N_transfem <- sum(.count_fam_pers$n[.count_fam_pers$transition=='Personnes transféminines'])
+.N_transfem_conceal <- sum(.count_fam_pers$n[.count_fam_pers$fam_pers!='Toute la famille' & 
+                                               .count_fam_pers$fam_pers!='Les deux parents' & 
+                                               .count_fam_pers$transition=='Personnes transféminines'])
+
+.p_reac_diff <- scales::percent(sum(.count_fam_reac$n[.count_fam_reac$fam_reac != 'Réaction positive'])/
                          sum(.count_fam_reac$n))
 
 .N_transmasc_neg <- sum(.count_fam_reac$n[.count_fam_reac$transition=='Personne transmasculine' &

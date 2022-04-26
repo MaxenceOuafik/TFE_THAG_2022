@@ -48,7 +48,7 @@ Ces trois concepts, s'ils peuvent être interconnectés, n'en demeurent pas moin
 knitr::include_graphics('files/sexe_genre_sexualite.png')
 ```
 
-```{r SGS, fig.align='center', fig.cap= 'Représentation schématique de la distinction sexe, genre, et sexualité', echo=FALSE, out.width = '80%', eval = knitr::is_html_output()}
+```{r SGS, fig.align='center', fig.cap= 'Représentation schématique de la distinction sexe, genre, et sexualité', echo=FALSE, out.width = '95%', eval = knitr::is_html_output()}
 
 knitr::include_graphics('files/sexe_genre_sexualite.png', dpi = 300)
 ```
@@ -89,7 +89,7 @@ L'accès au soin est un enjeu majeur pour les personnes transgenres. La relation
 
 ### Objectif du traitement
 
-L'objectif du THAG est d'améliorer le bien-être de la personne en la rapprochant de son point de confort corporel. Les études montrent, effectivement, que le bien-être psychologique global augmente après THAG, tandis que la dépression et les idées suicidaires diminuent [@green2021]. Pour ce faire, le concept de point de confort, bien développé par Genres Pluriels, est important à garder à l'esprit. Il s'agit de *"l'ensemble des caractéristiques mentales, comportementales, vestimentaires ou corporelles qui favorisent le sentiment de bien-être par rapport à son identité de genre"* [@genrespluriels2018]. Il est important de reconnaitre que ce point de confort est variable d'une personne à l'autre et qu'il n'existe pas un seul parcours de transition-type. À ce titre, il doit être recherché à l'anamnèse et rediscuté tout au long du suivi, dans la mesure où il peut varier avec le temps.
+L'objectif du THAG est d'améliorer le bien-être de la personne en la rapprochant de son point de confort corporel. Les études montrent, effectivement, que le bien-être psychologique global augmente après THAG, tandis que la dépression et les idées suicidaires diminuent [@green2021]. Pour ce faire, le concept de point de confort, bien développé par Genres Pluriels, est important à garder à l'esprit. Il s'agit de *"l'ensemble des caractéristiques mentales, comportementales, vestimentaires ou corporelles qui favorisent le sentiment de bien-être par rapport à son identité de genre"* [@genrespluriels2018]. Il est important de reconnaitre que ce point de confort est variable d'une personne à l'autre et qu'il n'existe pas un seul parcours de transition-type. À ce titre, il doit être recherché à l'anamnèse et rediscuté tout au long du suivi, dans la mesure où il peut varier avec le temps. Toutes les personnes transgenres ne choisissent pas d'entamer un THAG. Cependant, il s'agit d'un besoin fréquent, qui concernait 81.9% des personnes transmasculines et 89.4% des personnes transféminines ayant répondu à l'enquête de l'IEFH [@motmans2017].
 
 ### Deux modèles d'initiation du traitement
 

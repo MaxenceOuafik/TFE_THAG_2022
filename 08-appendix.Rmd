@@ -1,6 +1,6 @@
 # (PART) Annexes
 
-# Guide de codage des données qualitatives {#guide-de-codage-des-données-subjectives}
+## Guide de codage des données qualitatives {#guide-de-codage-des-données-subjectives}
 
 Afin d'extraire les données subjectives des notes médicales, un guide d'extraction et de codages des variables a été développé au préalable. Ce guide a ensuite été testé et affiné jusqu'à sa version définitive ayant permis la réalisation de ce TFE.
 
@@ -12,39 +12,39 @@ Les données collectées correspondent aux thématiques abordées lors de l'anam
 
 3.  Les aspects chirurgicaux
 
-## Aspects sociaux {#aspects-sociaux}
+### Aspects sociaux {#aspects-sociaux}
 
-### Famille
+#### Famille
 
--   *Personnes au courant :* personne (0) ; mère seulement (1) ; père seulement (2) ; les deux parents ou le seul parent en vie (3) ; les parents et la majorité de la famille (4) ; quelques membres de la famille mais pas les parents (5) ; toute la famille (6)
+-   *Personnes au courant :* personne (0) ; mère seulement (1) ; père seulement (2) ; les deux parents ou le seul parent en vie (3) ; les parents et la majorité de la famille (4) ; quelques membres de la famille, mais pas les parents (5) ; toute la famille (6)
 
 -   *Réaction initiale :* réaction négative (0) ; quelques difficultés (1) ; réaction neutre (2) ; réaction globalement positive (3)
 
-### Amis
+#### Amis
 
 -   *Personnes au courant :* personne (0) ; uniquement les amis proches (1) ; la plupart des amis (2) ; tous ou presque (3)
 
 -   *Réaction initiale :* réaction hostile (0) ; quelques difficultés (1) ; réaction neutre (2) ; réaction globalement positive (3)
 
-## Aspects hormonaux {#aspects-hormonaux}
+### Aspects hormonaux {#aspects-hormonaux}
 
-### Effets les plus attendus
+#### Effets les plus attendus
 
-Variables binaires codées (1) si l'effet a été mentionné explicitement comme une priorité pour le point de confort du/de la patient(e) et (0) dans le cas contraire. Chaque variable correspond à un des effets principaux du THAG soit :
+Variables binaires codées (1) si l'effet a été mentionné explicitement comme une priorité pour le point de confort du/de la patient(e) et (0) dans le cas contraire. Chaque variable correspond à un des effets principaux du THAG, soit :
 
--   Pour les femmes transgenres et autres personnes transféminines, le développement de la poitrine, l'adoucissement de la peau, la diminution de la pilosité, la répartition plus féminine des graisses, la diminution de la musculature, la disparitions des érections spontanées et un arrêt de l'alopécie.
+-   Pour les femmes transgenres et autres personnes transféminines, le développement de la poitrine, l'adoucissement de la peau, la diminution de la pilosité, la répartition plus féminine des graisses, la diminution de la musculature, la disparition des érections spontanées et un arrêt de l'alopécie.
 
 -   Pour les hommes transgenres et autres personnes transmasculines, l'aggravation de la voix, l'aménorrhée, la majoration de la pilosité, la répartition plus masculine des graisses, le développement de la musculature, et le développement d'un dickclit.
 
-### Inquiétudes vis-à-vis du traitement
+#### Inquiétudes vis-à-vis du traitement
 
 Variables binaires codées (1) si cet effet inquiète le patient ou (0) dans le cas contraire.
 
-### Cryopréservation des gamètes
+#### Cryopréservation des gamètes
 
 Variable correspondant à la réalisation d'une cryopréservation des gamètes avant l'introduction du THAG : non réalisée (0) démarches effectuées (1)
 
-## Aspects chirurgicaux {#aspects-chirurgicaux}
+### Aspects chirurgicaux {#aspects-chirurgicaux}
 
 Pour chaque chirurgie couramment envisagée : n'a pas exprimé de réaliser l'opération (0) ; ne sait pas (1) ; besoin identifié (2).
 
@@ -53,3 +53,225 @@ Ces chirurgies sont :
 -   Pour les femmes transgenres et autres personnes transféminines : l'augmentation mammaire, la vaginoplastie, les chirurgies de féminisation du visage et de féminisation vocale
 
 -   Pour les hommes transgenres et autres personnes transmasculines : la torsoplastie, l'hystérectomie, la phalloplastie, et la métaidoïoplastie
+
+## Recommandations pratiques pour l'initiation du THAG
+
+Ces fiches ont initialement été publiées sur le site internet de [PraTIQ](http://pratiq.be/).
+
+### Compétences culturelles
+
+Il est important de créer un cadre bienveillant et sécurisant pour les patient·e·s. Cela passe par le respect des pronoms et du prénom social, peu importe les changements administratifs réalisés. De plus, il est important de ne pas poser de questions intrusives sur la chirurgie ou les organes génitaux. Si l'information est cliniquement pertinente, il faut prendre le temps d'expliquer aux patient·e·s pourquoi on pose la question. Enfin, il faut est nécessaire de s'aligner sur le vocabulaire employé par les patient·e·s pour décrire leur propre corps et leurs propres expériences. Par exemple, si un patient est plus à l'aise de parler de son torse plutôt que de sa poitrine, le médecin devrait employer le même terme afin de ne pas générer un inconfort, et ce peu importe qu'il y ait eu opération ou non. De manière générale, les termes trop connotés au niveau du genre (p. ex. vagin, pénis) devraient être remplacés par des termes plus neutres (p. ex. sexe, organes génitaux).
+
+### THAG masculinisant
+
+#### Quels sont les effets du THAG masculinisant ?
+
+La figure \@ref(fig:EffetsTHAGM) donne une estimation générale des effets principaux du THAG masculinisant ainsi que de l'apparition attendue des effets. Le timing exact est hautement variable d'une personne à l'autre.
+
+```{r effets_THAG_M_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "EffetsTHAGM", fig.cap= 'Effets principaux du THAG masculinisant', fig.width=4.33, fig.height=2.4, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('files/effets_THAG_M.png')
+```
+
+```{r EffetsTHAGM, fig.align='center', fig.cap= 'Effets principaux du THAG masculinisant', echo=FALSE, out.width = '95%', eval = knitr::is_html_output()}
+
+knitr::include_graphics('files/effets_THAG_M.png', dpi = 300)
+```
+
+#### Que vérifier avant instauration du THAG ?
+
+1.  Informer le patient sur l'impact partiellement réversible sur la fertilité et proposer des options de cryopréservation des ovocytes
+
+2.  Si cliniquement pertinent, dépister les conditions pouvant potentiellement s'aggraver et les contrôler avant initiation du traitement : hypertension artérielle, syndrome d'apnée/hypopnée du sommeil, polycythémie, insuffisance cardiaque congestive, coronaropathie instable.
+
+#### Quel bilan initial réaliser ?
+
+En l'absence d'éléments particuliers à l'anamnèse qui pourraient inciter à demander des examens complémentaires, notamment pour exclure une pathologie qui pourrait évoluer péjorativement sous supplémentation androgénique, une prise de sang est généralement suffisante.
+
+-   Formule sanguine complète afin de dépister une éventuelle polycythémie et avoir une valeur de base pour l'hématocrite
+
+-   Une fonction rénale, un ionogramme et une mesure de la vitamine D afin de supplémenter une hypovitaminose D
+
+-   Une glycémie et une insuline à jeun ainsi qu'un dosage des triglycérides, du cholestérol total ainsi que des HDL- et LDL-cholestérol
+
+-   Fonction hépatique (transaminases, LDH, GGT, phosphatases alcalines
+
+-   Un bilan stéroïdien de base comprenant l'œstradiol et la testostérone totale. À cause des variations d'un laboratoire à l'autre dans la mesure de la testostérone libre, la testostérone totale est considérée comme plus reproductible et est privilégiée pour le suivi des taux hormonaux
+
+-   En dehors de ça, un recueil de la tension artérielle ainsi que du poids se justifie afin de les monitorer au long du traitement.
+
+#### Quel traitement prescrire ?
+
+Le Sustanon est généralement le premier choix, en raison de son faible coût (10,56€ par ampoule pouvant faire l'objet d'un remboursement partiel via un endocrinologue). La posologie de base est d'une ampoule en intramusculaire toutes les 3 semaines, l'intervalle pouvant être ajusté entre 2 et 4 semaines selon le monitoring. Son désavantage principal, outre la répétition d'injections pouvant être douloureuses, réside dans les pics de testostérone dans les 48-72h post-injection et les vallées peu avant l'injection suivante.
+
+Le Nebido est un autre ester de testostérone s'injectant par voie intramusculaire. Plus onéreux que le Sustanon (116,2€), il a l'avantage de ne devoir s'injecter que toutes les 12 semaines, l'intervalle pouvant être ajusté entre 10 et 14 semaines, selon le monitoring. Il permet d'obtenir des concentrations plus stables que le Sustanon, mais expose à un risque de micro-embolie pulmonaire huileuse s'il est injecté par inadvertance dans un vaisseau sanguin.
+
+L'Androgel ou Testarzon sont deux testostérones s'administrant par voie transdermique, à la posologie de 20 à 80mg/J, selon la prise de sang et la satisfaction clinique du patient. Ils ont l'avantage de ne pas nécessiter d'injection, mais doivent être appliqués quotidiennement, avec un risque théorique de transfert aux proches. Les concentrations sanguines sont stables mais généralement plus faibles qu'avec les formes injectables, ce qui peut rendre l'aménorrhée plus difficile à atteindre. Enfin, il s'agit de produits onéreux (51,16€ par flacon pour le Testarzon, soit entre 25€ et 100€ par mois environ selon la posologie nécessaire). Il peut en outre s'agir d'une option intéressante pour les personnes désirant commencer avec des microdosages, dans la mesure où sa posologie peut être plus finement contrôlée que via les injections et sans générer de gaspillage de moitié d'ampoule.
+
+#### Quel monitoring envisager ?
+
+La première année, un monitoring trimestriel est de mise afin de s'assurer du bien-être du patient, d'ajuster l'intervalle entre deux injections ou la posologie du gel. Par la suite, un contrôle 1 à 2 fois par an suffit.
+
+-   Monitorer la testostérone totale qui doit idéalement se situer entre 400 et 700ng/dL (14-24 nmol/L)
+
+    -   En cas de traitement par Sustanon, la prise de sang doit être réalisée à mi-chemin entre deux injections ou juste avant l'injection suivante. Les deux approches se valent, mais la deuxième peut être particulièrement justifiée si le patient se plaint de fatigue/baisse de moral les derniers jours avant l'injection, afin de s'assurer que les valeurs restent \> 400ng/dL (14nmol/L)
+
+    -   En cas de traitement par Nebido, la prise de sang sera réalisée juste avant l'injection suivante
+
+-   Monitorer l'hémoglobine, l'hématocrite, le poids, la pression artérielle et les lipides ; traitement habituel des facteurs de risque cardio-vasculaire
+
+-   Ostéodensitométrie selon les guidelines de la population générale ou, plus tôt, en cas de discontinuation du traitement après ovariectomie
+
+-   Frottis cervico-vaginaux selon les guidelines classiques
+
+-   Si mastectomie, encourager quand même une (auto-)palpation sous- et péri-aréolaire, le risque de cancer du sein devenant très faible, mais non nul. Si la poitrine est toujours présente, dépistage du cancer du sein selon les guidelines classiques
+
+#### Quelle sécurité sur le long terme ?
+
+-   La plupart des études ne retrouvent pas d'effet sur la résistance à l'insuline ou la glycémie à jeun
+
+-   Instauration d'un profil métabolique athérogène avec majoration des triglycérides et diminution du HDL-cholestérol. Impact incertain sur le LDL-C
+
+-   Majoration de l'hémoglobinémie et de l'hématocrite, atteignant un plateau avant de redescendre en général. Rarement cliniquement significatif au point de devoir ajuster la dose
+
+-   Élévation des transaminases hépatiques possibles, mais données rassurantes sur l'hépatotoxicité
+
+-   Résultats contradictoires sur la tension artérielle (stable, augmentée, voire diminuée selon les études)
+
+-   Aucun surplus d'évènements cardio-vasculaires (infarctus, AVC ni TVP) ni de décès par rapport à la population générale n'a été remarqué
+
+-   Pas de risque excédentaire de cancer de l'endomètre démontré, bien que les résultats soient conflictuels sur l'aspect prolifératif de l'endomètre (légère prolifération endométriale dans certains cas, atrophie semblable à la ménopause dans d'autres).
+
+-   Pas de risque excédentaire de cancer ovarien, mais modifications histopathologiques bénignes courantes (atrophie, aspect polyfolliculaire, kystes)
+
+-   Pas de risque accru de cancer mammaire, possible effet protecteur de par la diminution de l'œstradiol induite par le traitement
+
+-   Densité osseuse stable ou majorée après initiation de la THAG, mais perte osseuse en cas de supplémentation insuffisante après ovariectomie
+
+#### Quelle contraception proposer ?
+
+On retrouve une anovulation liée à une suppression de l'axe hypothalamo-hypophyso-gonadique chez une partie des patient·e·s, mais des phénomènes d'échappement peuvent survenir par la suite, ce qui induit la nécessité d'une méthode contraceptive, si les pratiques sexuelles du patient le justifient
+
+-   Le DIU cuivre est une possibilité n'offrant aucune interaction au niveau hormonal. Néanmoins, le spotting et les crampes peuvent être anxiogènes tandis que le placement en lui-même peut générer de la dysphorie. Penser à une crème locale œstrogénique avant le placement pour réduire l'inconfort, vu l'atrophie et la sècheresse vaginale induite par la diminution en œstradiol liée au traitement hormonal
+
+-   Le DIU au lévonorgestrel est une autre possibilité n'induisant par d'interaction avec le traitement hormonal, le lévonorgestrel étant un progestatif avec un profil androgénique. Il a l'avantage de réduire potentiellement les douleurs sus-pubiennes et la dysménorrhée tout en pouvant favoriser une aménorrhée.
+
+-   Les pilules contraceptives contenant uniquement des progestatifs (« minipilules ») sont des options envisageables. Veiller à choisir un progestatif avec un profil androgénique ou neutre pour éviter une interaction (en Belgique, les minipilules à base de Désogestrel sont à préconiser, en raison de leur effet androgénique très faible, mais sans interaction avec le traitement)
+
+-   Le Depo-Provera (« piqûre contraceptive ») a l'avantage d'un mode d'administration non genré et habituel pour le patient, sans induire d'interaction avec le traitement. Il peut en outre favoriser l'aménorrhée lorsque celle-ci est difficile à obtenir par traitement hormonal seul. Les inconvénients sont une prise de poids possible, un effet négatif sur le bilan lipidique et des inquiétudes sur la santé osseuse à long terme.
+
+-   L'implant contraceptif peut également être envisagé, l'étonogestrel ayant une activité androgénique faible et ne représentant pas un risque d'interaction avec le traitement hormonal
+
+-   Les pilules œstro-progestatives sont à éviter, en raison d'interactions potentielles vu l'augmentation du SHBG pouvant mener à une diminution de la testostérone libre. En outre, on retrouve une possible stimulation mammaire pouvant entraîner de la dysphorie chez le patient.
+
+\newpage
+
+### THAG féminisant
+
+#### Que faut-il vérifier avant l'instauration du traitement ?
+
+-   Informer les patient·e·s de l'impact potentiellement irréversible et rapide sur la fertilité et discuter des options de cryopréservation des gamètes
+
+-   Si cliniquement pertinent, dépister les conditions pouvant potentiellement s'aggraver et les contrôler avant initiation du traitement :
+
+    -   Antécédents de TVP ; correction des facteurs de risque ; pas de screening de routine pour thrombophilie sauf si éléments à l'anamnèse dans les antécédents personnels ou familiaux
+
+    -   Cancers hormono-dépendants
+
+    -   Maladie coronarienne ou cérébro-vasculaire
+
+    -   Hyperprolactinémie, hypertriglycéridémie
+
+    -   Lithiase vésiculaire
+
+#### Quels sont les effets du THAG féminisant ?
+
+La figure \@ref(fig:EffetsTHAGF) donne une estimation générale des effets principaux du THAG masculinisant ainsi que de l'apparition attendue des effets. Le timing exact est hautement variable d'une personne à l'autre.
+
+```{r effets_THAG_F_word, echo=FALSE, warning=FALSE, message=FALSE, fig.id = "EffetsTHAGF", fig.cap= 'Effets principaux du THAG féminisant', fig.width=4.33, fig.height=2.4, eval = !knitr::is_html_output()}
+
+knitr::include_graphics('files/effets_THAG_F.png')
+```
+
+```{r EffetsTHAGF, fig.align='center', fig.cap= 'Effets principaux du THAG féminisant', echo=FALSE, out.width = '95%', eval = knitr::is_html_output()}
+
+knitr::include_graphics('files/effets_THAG_F.png', dpi = 300)
+```
+
+#### Quel bilan initial réaliser ?
+
+En l'absence d'éléments particuliers à l'anamnèse qui pourraient inciter à demander des examens complémentaires, notamment pour exclure une pathologie qui pourrait évoluer péjorativement sous supplémentation œstrogénique, une prise de sang est généralement suffisante.
+
+-   Formule sanguine complète
+
+-   Une fonction rénale, un ionogramme et une mesure de la vitamine D afin de supplémenter une hypovitaminose D. En outre, une première valeur de kaliémie est intéressante pour le monitoring s'il est nécessaire d'introduire de la Spironolactone
+
+-   Une glycémie et une insuline à jeun ainsi qu'un dosage des triglycérides, du cholestérol total ainsi que des HDL- et LDL-cholestérol
+
+-   Fonction hépatique (transaminases, LDH, GGT, phosphatases alcalines
+
+-   Un bilan stéroïdien de base comprenant la FSH/LH, l'œstradiol, la testostérone totale et la prolactine
+
+-   En dehors de ça, un recueil de la tension artérielle ainsi que du poids se justifient afin de les monitorer au long du traitement.
+
+#### Quel traitement prescrire ?
+
+La base du THAG féminisant se compose d'œstradiol afin d'obtenir les effets féminisants (pousse de la poitrine, répartition des graisses, assouplissement de la peau). L'œstradiol seul peut suffire à diminuer la testostérone jusqu'à lui faire atteindre les valeurs d'une femme cisgenre, mais cela n'est pas le cas la plupart du temps. L'ajout d'un antiandrogène doit se faire en concertation avec la patiente, en expliquant les effets indésirables potentiels et en les mettant en balance avec les effets désirables pour la patiente. En effet, une partie des effets du traitement hormonal (diminution de la pilosité, diminution des érections spontanées, arrêt de la perte des cheveux et diminution de la masse musculaire) sont liés aux concentrations en testostérone et non à celles en œstradiol. Selon les valeurs, les préférences et le point de confort de la patiente, l'ajout d'un antiandrogène peut se justifier d'emblée ou par la suite du suivi en l'absence d'une suppression satisfaisante de la testostéronémie chez une patiente accordant une importance plus forte aux effets liés à la testostérone. L'impact de la testostérone sur la pousse de la poitrine n'est pas clairement établi, mais un effet négatif semble plausible.\
+La progestérone micronisée est parfois utilisée en raison de reports anecdotiques sur une meilleure forme de la poitrine. Néanmoins, cet effet n'a pas encore été scientifiquement étudié et aucune preuve formelle n'existe dans un sens ou l'autre. Il est à noter qu'il existe un risque de réduire l'accroissement mammaire si pris au début de la pousse de la poitrine (dans les 12 à 24 premiers mois) et qu'un risque accru de TVP et d'AVC a été mis en évidence chez les femmes cisgenres qui prenaient des progestatifs en plus de l'œstradiol comme traitement substitutif à la ménopause.
+
+\
+En termes de traitement à base d'œstradiol, 3 options sont possibles :
+
+-   Le gel (Oestrogel) a l'avantage d'être peu onéreux (20,83€ la boîte de 3 flacons, partiellement remboursée) mais nécessite une application quotidienne. La posologie n'est pas clairement établie dans la littérature, mais, en se basant sur les équivalences, une dose de 1,5 à 6mg/J semble raisonnable et devra être adaptée en fonction du monitoring.
+
+-   Les patches (Dermestril) sont un peu plus onéreux que les gels (10 à 30€ par mois selon la posologie) et ont l'avantage de ne devoir être remplacés que 2x/semaine. La posologie varie entre 50 et 200µg/24h. Des effets d'irritation locale sont possibles
+
+-   Les œstradiols par voie orale (Progynova/Estrofem/Zumenon/Aacifemine) ont l'avantage de ne pas nécessiter d'application ou de devoir être portés toute la journée. Néanmoins, ils sont liés à un risque potentiellement accru de TVP de par le premier passage hépatique qui génère un profil procoagulant plus fort que pour les formes transdermiques.
+
+En termes de traitement antiandrogénique, 4 options principales existent
+
+-   La spironolactone est généralement le premier choix de par son faible coût (5,38€). La posologie est de 100 à 300mg/J en 2 prises, vu sa faible ½ vie. Son risque principal au niveau médical est d'induire une hyperkaliémie et l'ionogramme devra donc être monitoré. Au niveau clinique, de nombreuses patientes signalent des troubles de la concentration sous Spironolactone, ce qui peut parfois nécessiter de changer de traitement.
+
+-   Les analogues de la GnRH se présentent sous forme d'injection sous-cutanée mensuelle ou trimestrielle. Ils ont l'avantage d'être très efficaces pour diminuer les taux de testostérone et d'être bien tolérés cliniquement. Leur désavantage principal est leur prix (182,71€ pour l'injection trimestrielle de Depo-Eligard) ainsi que leur mode d'administration sous-cutanée. Il est à noter que, puisqu'il s'agit d'analogues du GnRH, un pic transitoire de testostérone aura lieu à la première injection. À ce titre, un autre antiandrogène devrait être introduit 3 jours avant la première injection et maintenu pendant 3 semaines.
+
+-   Le Bicalutamide est un antagoniste fort de la testostérone. Il connaît actuellement une certaine popularité parmi une partie des patient·e·s et sur certains sites internet mais ne fait pas partie des habitudes de prescription. Sa popularité provient du fait qu'il exerce une puissante action antiandrogénique et qu'il exerce une action féminisante intrinsèque. En effet, les taux de testostérone augmentent avec ce traitement mais leur action est bloquée au niveau des récepteurs. À ce titre, une partie de la testostérone est aromatisée en œstradiol. Néanmoins, il n'a été que très peu évalué sur des femmes transgenres, est coûteux (181€ la boîte de 100cp) et expose à un risque faible d'hépatotoxicité fulminante. En outre, vu la majoration du taux de testostérone, son dosage devient peu informatif pour le monitoring du traitement.
+
+-   L'Androcur a longtemps été utilisé comme premier choix mais tombe actuellement en désuétude à cause des risques de méningiomes, d'hépatotoxicité, de TVP, de prolactinome ainsi que de son effet dépressogène important. Lorsqu'il ne peut être évité, il ne faut pas dépasser la posologie de 10mg/J car le développement de méningiome est un effet indésirable dose-dépendant.
+
+Un traitement antiandrogénique n'a évidemment aucun intérêt après orchidectomie, si la patiente a choisi de réaliser cette intervention.
+
+#### Quelle sécurité sur le long terme ?
+
+-   Majoration des triglycérides, mais pas d'impact sur le cholestérol
+
+-   Marqueurs de résistance à l'insuline
+
+-   Majoration des transaminases hépatiques jusqu'à 2xVN possible, mais données rassurantes sur l'hépatotoxicité malgré des incertitudes encore présentes
+
+-   Pas de preuve d'une majoration du risque d'hypertension
+
+-   Apparition d'un profil procoagulant, cette forme étant plus marquée pour les formes orales, bien que la différence soit faible
+
+-   Résultats parfois contradictoires dans la littérature, mais signaux suggérant un plus grand risque d'infarctus du myocarde et d'AVC, surtout après 6 ans de traitement
+
+-   Hyperprolactinémie classique, mais risque faible de prolactinome
+
+-   Plus faible prévalence de cancers prostatiques de par la déprivation androgénique, mais il n'y a pas de valeur seuil connue du PSA pour les femmes transgenres
+
+-   Prévalence plus élevée de cancers mammaires que chez les hommes cisgenres, mais risque restant relativement faible par rapport aux femmes cisgenres
+
+-   Densité minérale osseuse préservée sous œstrogènes
+
+#### Quel monitoring envisager ?
+
+La première année, un monitoring trimestriel est de mise afin de s'assurer du bien-être de la patiente, d'ajuster la posologie du traitement et l'ajout éventuel d'un antiandrogène, selon les besoins et désirs de la patiente.
+
+-   L'œstradiol devrait se situer entre 100 et 200pg/mL et la testostérone totale ne devrait idéalement pas dépasser 50ng/dL (1,73nmol/L) pour évite l'apparition d'effets androgéniques sur la musculature, la pilosité, les érections ou la calvitie. En cas d'utilisation de Spironolactone, ces valeurs de testostéronémie sont à prendre avec précaution dans la mesure où la Spironolactone agit également comme antagoniste de la testostérone. À ce titre, le dosage est moins informatif.
+
+-   Monitorer le poids, la pression artérielle, la glycémie à jeun et les lipides ; traitement classique des facteurs de risque cardio-vasculaires
+
+-   Si du Spironolactone est utilisé, la fonction rénale et la kaliémie devraient être monitorées
+
+-   Une ostéodensitométrie est conseillée à 60 ans ou en cas de prises irrégulières du traitement
+
+-   Le screening des cancers mammaires et prostatiques suit les guidelines habituelles
