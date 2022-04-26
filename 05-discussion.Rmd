@@ -4,7 +4,7 @@ bibliography: references.bib
 
 # Discussion
 
-Ce TFE a présenté les données de 26 patient·e·s transgenres suivi·e·s durant une durée médiane de six mois après initiation du THAG. Cet échantillon se compose d'une population jeune, dotée d'une grande mobilité géographique, aux besoins variés en termes de soins trans-affirmatifs et bénéficiant d'un bon soutien social en général. En outre, l'application des guidelines sur le THAG a permis d'obtenir des résultats satisfaisants au niveau des valeurs de laboratoire dans un contexte de médecine générale.
+Ce TFE a présenté les données de 26 patient·e·s transgenres suivi·e·s durant une durée médiane de six mois après initiation du THAG. Cet échantillon se compose d'une population jeune, dotée d'une grande mobilité géographique, aux besoins variés en termes de soins trans-affirmatifs et bénéficiant d'un bon soutien social en général. En outre, l'application des guidelines sur le THAG dans un contexte de médecine générale a permis d'obtenir des résultats satisfaisants au niveau des valeurs de laboratoire.
 
 ## Démographie
 
