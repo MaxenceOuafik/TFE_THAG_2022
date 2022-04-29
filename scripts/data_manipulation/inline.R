@@ -7,6 +7,8 @@ source('scripts/data_manipulation/create_long_data.R', encoding = 'UTF-8')
   sum(.ant_genre$elem_med_2 == 'TSA'& .ant_genre$genre == 'F', 
       na.rm = T)
 
+.p_BIM <- scales::percent(sum(obj_demog_data$mutuelle == 'BIM')/nrow(obj_demog_data))
+
 # Eléments de soin 
 .N_dep <- sum(obj_ant_data$elem_med_1 == "depression", na.rm = T)
 .p_dep <- scales::percent(.N_dep/nrow(obj_ant_data))

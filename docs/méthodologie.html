@@ -48,8 +48,12 @@
 
 
 
-<link href="assets/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+<script src="assets/core-js-2.5.3/shim.min.js"></script>
+<script src="assets/react-17.0.0/react.min.js"></script>
+<script src="assets/react-17.0.0/react-dom.min.js"></script>
+<script src="assets/reactwidget-1.0.0/react-tools.js"></script>
 <script src="assets/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="assets/reactable-binding-0.2.3/reactable.js"></script>
 <script src="assets/plotly-binding-4.10.0/plotly.js"></script>
 <script src="assets/typedarray-0.1/typedarray.min.js"></script>
 <link href="assets/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
@@ -244,7 +248,7 @@ div.csl-indent {
 <h1>Méthodologie</h1>
 <div id="design" class="section level2">
 <h2>Design</h2>
-<p>Ce TFE consiste en une étude de cohorte rétrospective avec une analyse mixte par conversion. En effet, en plus des données quantitatives pures, j’ai choisi d’inclure des données qualitatives issues de l’anamnèse. N’ayant pas réalisé d’interview, et n’ayant donc pas accès à des verbatims exacts permettant une analyse poussée, j’ai opté pour une conversion des données qualitatives en données quantitatives en utilisant une analyse de contenu quantitative <span class="citation">(<a href="#ref-pluye2019" role="doc-biblioref">46</a>)</span>. En pratique, le dossier médical informatisé étant structuré sous la forme SOAP, j’ai extrait les données subjectives des premières consultations, selon un guide de codage des données disponible <a href="guide-de-codage-des-données-subjectives.html#guide-de-codage-des-données-subjectives">dans les annexes</a>. L’objectif, en incluant des données qualitatives, était double. D’une part, elles permettent d’étendre la portée du TFE pour interroger d’autres aspects, tels que le coming out, le soutien familial, la cryopréservation des gamètes, ainsi que les attentes vis-à-vis de la THAG ou de la chirurgie. D’autre part, elles apportent une plus-value pour les médecins généralistes qui liront ce travail en apportant un éclairage sur la pluralité des attentes et des parcours de transition.</p>
+<p>Ce TFE consiste en une étude de cohorte rétrospective avec une analyse mixte par conversion. En effet, en plus des données quantitatives pures, j’ai choisi d’inclure des données qualitatives issues de l’anamnèse. N’ayant pas réalisé d’interview, et n’ayant donc pas accès à des verbatims exacts permettant une analyse poussée, j’ai opté pour une conversion des données qualitatives en données quantitatives en utilisant une analyse de contenu quantitative <span class="citation">(<a href="#ref-pluye2019" role="doc-biblioref">47</a>)</span>. En pratique, le dossier médical informatisé étant structuré sous la forme SOAP, j’ai extrait les données subjectives des premières consultations, selon un guide de codage des données disponible <a href="guide-de-codage-des-données-subjectives.html#guide-de-codage-des-données-subjectives">dans les annexes</a>. L’objectif, en incluant des données qualitatives, était double. D’une part, elles permettent d’étendre la portée du TFE pour interroger d’autres aspects, tels que le coming out, le soutien familial, la cryopréservation des gamètes, ainsi que les attentes vis-à-vis de la THAG ou de la chirurgie. D’autre part, elles apportent une plus-value pour les médecins généralistes qui liront ce travail en apportant un éclairage sur la pluralité des attentes et des parcours de transition.</p>
 <p>La recherche de littérature ayant servi à la rédaction de l’introduction et des fiches pratiques a été réalisée dans le cadre de ma pratique clinique ou des formations que je donne. Elle ne figure donc pas dans la méthodologie de ce travail, ayant été réalisée préalablement à la conduite de ce dernier.</p>
 </div>
 <div id="sélection-des-participantes" class="section level2">
@@ -277,7 +281,7 @@ div.csl-indent {
 </div>
 <div id="éthique" class="section level2">
 <h2>Éthique</h2>
-<p>S’agissant d’une étude rétrospective menée sur des dossiers médicaux que je gère dans le cadre d’une pratique clinique habituelle et considérant qu’aucun examen supplémentaire, ni interview n’a été réalisée pour récolter les données, le présent TFE n’était pas redevable d’un avis devant le comité d’éthique de la faculté de médecine. En effet, le travail ne répondait à aucun des critères publiés par le comité d’éthique vis-à-vis des TFE sur lesquels ils devaient donner leur accord avant la collecte des données. Le département de médecine générale de l’Université de Liège a été contacté en vue de confirmer que ce TFE ne correspondait pas aux critères nécessitant une évaluation préalable par le comité d’éthique. Les patient·e·s éligibles ont toutefois été contacté·e·s par écrit en vue de leur expliquer les tenants et aboutissants de ce TFE et de leur demander l’autorisation d’utiliser leurs données dans le cadre de son élaboration, en spécifiant qu’un refus n’entraînerait aucune conséquence négative sur notre relation thérapeutique ni sur la poursuite du suivi. Il leur a de plus été rappelé qu’iels pouvaient retirer leur consentement à n’importe quel moment, et ce sans conséquence. Les données des patient·e·s n’ont été extraites qu’en cas de réponse écrite positive de leur part.</p>
+<p>S’agissant d’une étude rétrospective menée sur des dossiers médicaux que je gère dans le cadre d’une pratique clinique habituelle et considérant qu’aucun examen supplémentaire ni interview n’a été réalisée pour récolter les données, le présent TFE n’était pas redevable d’un avis devant le comité d’éthique de la faculté de médecine. En effet, le travail ne répondait à aucun des critères publiés par le comité d’éthique vis-à-vis des TFE sur lesquels il devait donner son accord avant la collecte des données. Le département de médecine générale de l’Université de Liège a été contacté en vue de confirmer que ce TFE ne correspondait pas aux critères nécessitant une évaluation préalable par le comité d’éthique. Les patient·e·s éligibles ont toutefois été contacté·e·s par écrit en vue de leur expliquer les tenants et aboutissants de ce TFE et de leur demander l’autorisation d’utiliser leurs données dans le cadre de son élaboration, en spécifiant qu’un refus n’entraînerait aucune conséquence négative sur notre relation thérapeutique ni sur la poursuite du suivi. Il leur a de plus été rappelé qu’iels pouvaient retirer leur consentement à n’importe quel moment, et ce sans conséquence. Les données des patient·e·s n’ont été extraites qu’en cas de réponse écrite positive de leur part.</p>
 <p>En outre, considérant que le seul risque encouru par le patient résidait dans une fuite des données, un identifiant de 3 caractères générés aléatoirement a été attribué à chaque patient·e lors de l’extraction des données afin de garantir leur anonymat. Le document de codage permettant de faire le lien entre l’identité des patient·e·s et leur identifiant n’est connu que de ma personne et se situe dans un dossier sécurisé.</p>
 </div>
 <div id="dissémination-des-résultats" class="section level2">
@@ -292,7 +296,7 @@ div.csl-indent {
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-pluye2019" class="csl-entry">
-<div class="csl-left-margin">46. </div><div class="csl-right-inline">Pluye P. <span>L’intégration en méthodes mixtes. Cadre conceptuel pour l’intégration des phases, résultats et données qualitatifs et quantitatifs</span>. In: Ridde V, Dagenais C, editors. <span>Évaluation des interventions de santé mondiale : Méthodes avancées</span>. <span>Québec et Marseille</span>: <span>Éditions science et bien commun et IRD Éditions</span>; 2019. p. 187–212. </div>
+<div class="csl-left-margin">47. </div><div class="csl-right-inline">Pluye P. <span>L’intégration en méthodes mixtes. Cadre conceptuel pour l’intégration des phases, résultats et données qualitatifs et quantitatifs</span>. In: Ridde V, Dagenais C, editors. <span>Évaluation des interventions de santé mondiale : Méthodes avancées</span>. <span>Québec et Marseille</span>: <span>Éditions science et bien commun et IRD Éditions</span>; 2019. p. 187–212. </div>
 </div>
 </div>
             </section>
@@ -340,7 +344,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["TFE.PDF"],
 "search": {
 "engine": "fuse",
 "options": null
