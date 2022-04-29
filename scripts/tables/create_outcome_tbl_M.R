@@ -1,7 +1,7 @@
 requireNamespace('gtsummary')
 requireNamespace('flextable')
 
-.outcome_M_ft <- .long_outcome_data %>%
+.outcome_M_tbl <- .long_outcome_data %>%
   filter (transition == 'Personnes transmasculines') %>%
   mutate(androgène = replace_na(androgène, 'Avant traitement')) %>%
   left_join(select(.long_lab_data, patient, consultation, GR:tg), by = c('patient', 'consultation')) %>%
@@ -47,7 +47,9 @@ requireNamespace('flextable')
                                                                                  Hb ~ 'Hémoglobine (g/dL)',
                                                                                  Hct ~ 'Hématocrite (%)',
                                                                                  creat ~ 'Créatinine (mg/dL)')) %>%
-  gtsummary::modify_header(label = '**Paramètres**') %>%
+  gtsummary::modify_header(label = '**Paramètres**') 
+
+.outcome_M_ft <- .outcome_M_tbl %>%
   gtsummary::bold_labels() %>%
   gtsummary::as_flex_table()
 
@@ -80,3 +82,21 @@ requireNamespace('flextable')
 
 .outcome_M_ft_word <- flextable::width(.outcome_M_ft_word, j= 1, width = 4.4, unit = "cm")
 .outcome_M_ft_word <- flextable::width(.outcome_M_ft_word, j= 2:6, width = 2.1, unit = "cm")
+
+.outcome_M_tbl_HTML <- .outcome_M_tbl %>%
+  gtsummary::as_tibble() %>%
+  column_to_rownames(var="**Paramètres**") %>%
+  `colnames<-`(c('T0, N=13',
+                 'T1, N=12',
+                 'T2, N=9',
+                 'T3, N=3',
+                 'T4, N=3')) %>%
+  reactable::reactable(columns = list(
+    .rownames = reactable::colDef(style = list(borderRight = "1px solid #eee", 
+                                               backgroundColor = "#f7f7f7",
+                                               position = "sticky", left = 0))),
+    pagination = FALSE, 
+    highlight = TRUE, 
+    sortable = F,
+    class = "my-tbl",
+    defaultColDef = reactable::colDef(headerClass = "my-header"))

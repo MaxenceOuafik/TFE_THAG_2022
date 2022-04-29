@@ -211,7 +211,7 @@ ggsave("output/plots/outcome_plot_M.png",
   plotly::config(displayModeBar = FALSE)
 
 .O2_FSH_M_HTML <- .O2_FSH_M +
-  labs(title = 'C')+ 
+  labs(title = 'D')+ 
   theme(legend.position='none')
 
 .anim_O2_FSH_M <- plotly::ggplotly(.O2_FSH_M_HTML, tooltip = 'text') %>%

@@ -13,7 +13,7 @@ levels(.demog_data_table$genre) <- c('Femme', 'Homme', 'Non-binaire')
 levels(.demog_data_table$prov) <- c("Liège", "Autre")
 levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-inscrit·e')
 
-.demog_ft <- 
+.demog_tbl <- 
   .demog_data_table  %>%
   select(age, prov, genre, sexe, mutuelle, pren, cec) %>%
   relocate(prov, .after = age) %>%
@@ -27,8 +27,10 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
   gtsummary::tbl_summary(by = Genres, type = 'Âge' ~ 'continuous2',
                          statistic = 'Âge' ~ c('{median}', '[{min} - {max}]')) %>%
   gtsummary::modify_header(label = '**Caractéristiques**') %>%
+  gtsummary::add_overall() 
+
+.demog_ft <- .demog_tbl %>%
   gtsummary::bold_labels() %>%
-  gtsummary::add_overall() %>%
   gtsummary::as_flex_table()
 
 
@@ -51,8 +53,8 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
   flextable::font(fontname = 'Lato Bold', part = 'header')
 
 .demog_ft <- flextable::set_caption(.demog_ft,
-                         "Caractéristiques démographiques des participant·e·s",
-                         style = 'Légende1')
+                                    "Caractéristiques démographiques des participant·e·s",
+                                    style = 'Légende1')
 
 .demog_ft_word <- .demog_ft %>%
   flextable::fontsize(j=1:5, size=10, part ='body') %>%
@@ -65,5 +67,22 @@ levels(.demog_data_table$mutuelle) <- c('BIM', 'Assuré·e ordinaire', 'Non-insc
 .demog_ft_word <- flextable::width(.demog_ft_word, j= 4, width = 3, unit = "cm")
 .demog_ft_word <- flextable::width(.demog_ft_word, j= 5, width = 3.5, unit = "cm")
 
+.demog_HTML <- .demog_tbl %>%
+  gtsummary::as_tibble() %>%
+  column_to_rownames(var="**Caractéristiques**") %>%
+  `colnames<-`(c('Total (N=26)', 
+                 "Femmes (N=12)", 
+                 'Hommes (N=9)', 
+                 'Non-binaires (N=5)'))
 
-
+.demog_tbl_HTML <- reactable::reactable(.demog_HTML,
+                     sortable = F,
+                     rownames = T,
+                     columns = list(
+                     .rownames = reactable::colDef(style = list(borderRight = "1px solid #eee", 
+                                                                backgroundColor = "#f7f7f7",
+                                                                position = "sticky", left = 0))),
+                     pagination = FALSE, 
+                     highlight = TRUE, 
+                     class = "my-tbl",
+                     defaultColDef = reactable::colDef(headerClass = "my-header")) 
