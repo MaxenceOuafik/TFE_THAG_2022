@@ -43,6 +43,7 @@ bookdown::gitbook:
       position: fixed
     edit : null
     download: ["pdf"]
+    info: false
     sharing:
       github: yes
       facebook: yes
