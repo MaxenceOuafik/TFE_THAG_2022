@@ -36,7 +36,7 @@ L'outcome le plus pertinent aurait été de mesurer la satisfaction des patient�
 
 ## Analyses statistiques
 
-Les données des patient·e·s ayant entamé un THAG féminisant ont été regroupées en fonction du type de traitement. De ce fait, l'échantillon par catégorie était trop faible que pour qu'une analyse statistique s'avère informative. Pour les patient·e·s ayant commencé un THAG masculinisant, un test des rangs signés de Wilcoxon a été choisi pour comparer les valeurs avant le THAG à celle lors de la première consultation de suivi. Ce test a été sélectionné au vu du caractère non normalement distribué des valeurs pour des échantillons appariés. Étant donnée la taille que la taille de l'échantillon ne permet pas d'obtenir une puissance statistique importante, le seuil de signification choisi est de 5%.
+Les données des patient·e·s ayant entamé un THAG féminisant ont été regroupées en fonction du type de traitement. De ce fait, l'échantillon par catégorie était trop faible que pour qu'une analyse statistique s'avère informative. Pour les patient·e·s ayant commencé un THAG masculinisant, un test des rangs signés de Wilcoxon a été choisi pour comparer les valeurs avant le THAG à celle lors de la première consultation de suivi. Ce test a été sélectionné au vu du caractère non normalement distribué des valeurs pour des échantillons appariés. Étant donné que la taille de l'échantillon ne permet pas d'obtenir une puissance statistique importante, le seuil de signification choisi est de 5%.
 
 ## Validation des résultats
 
