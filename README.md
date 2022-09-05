@@ -18,7 +18,7 @@
 
 -   **output** : ce dossier contient tous les graphiques générés via R dans un sous-dossier intitulé *plots* ainsi que la version Word du TFE
 
--   **renv** contient une copie de tous les packages utilisés pour l'élaboration de ce projet dans la version utilisée lors du TFE
+-   **renv** contient les réglages et le script nécessaires au bon fonctionnement de *renv*
 
 -   **scripts** contient les différents scripts ayant permis la manipulation des données (sous-dossier *data_manipulation*), la création des graphiques (sous-dossier *plots*), ainsi que la création des tables (sous-dossier *tables*). Il contient également deux scripts importants : *import_data.R* qui permet d'importer les données, ainsi que *render_book.R* qui permet de créer le fichier Word et le site HTML à partir des fichiers RMarkdown et des scripts.
 
