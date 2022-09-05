@@ -50,6 +50,10 @@ Toutefois, pour des raisons de confidentialité, les données personnelles des p
 
 ## Contributions
 
+La totalité de ce travail a été réalisé par mes soins.
+
+Je remercie Zélie Huvelle de Genres Pluriels ainsi que mes ami·e·s pour leur travail de relecture sur le texte final.
+
 ## Licence
 
 Tous les fichiers de ce répertoire sont sous la licence Creative Commons CC BY-NC 4.0. Quiconque peut partager et adapter les différents fichiers tant que l'œuvre originale est créditée et qu'aucune utilisation commerciale n'est faite de ce travail ou de tout ou partie du matériel le composant.
