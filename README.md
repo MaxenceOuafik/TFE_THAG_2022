@@ -10,7 +10,7 @@
 
 **Conclusion :** ce TFE contribue à montrer que l'instauration d'un THAG peut faire partie des compétences des médecins généralistes et que proposer des soins trans-spécifiques en première ligne comporte des avantages pour les patient·e·s, par rapport aux centres hospitaliers. Il souligne également l'importance d'offrir des soins de qualité dans un cadre trans-affirmatif pour contribuer à améliorer le bien-être des personnes transgenres.
 
-## Organisation du répertoire 
+## Organisation du répertoire
 
 -   **docs** : ce dossier contient les fichiers générés par bookdown en vue de créer la version HTML du TFE.
 
